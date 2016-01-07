@@ -1,0 +1,3561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="59cce1bb-ffc1-4e04-9293-3eec37604899"
+  name="FlowNetwork"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="c90aefb7-2a30-47f6-a3e7-b30d89f4171d"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFlowNetwork"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="3e1f83cf-28d2-4cb9-826c-1cfb826cafa7"
+        name="AdjustableSpliter"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="14efd332-d51c-479a-bb37-858582021761"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DAdjustableSpliter"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8343fc86-1763-42f9-b92b-457dcd4ce9df"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d9c76a66-1047-42e0-b3be-6d67e8add8e1">
+                <propertyInstance
+                  Id="a65049ef-3787-425a-8666-9538c43bb2cf"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e3a59865-fe0d-4194-b6e7-77469cc0700e">
+                <propertyInstance
+                  Id="79eadf55-d4df-4ade-a057-4ff4aec5cff6"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fbedd484-bf61-4c11-a3de-4cf046cc8046">
+                <propertyInstance
+                  Id="0ba7670f-3e8b-4c4f-9f67-229082529c45"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="76390607-5839-456a-8ab8-75daf316429c">
+                <propertyInstance
+                  Id="6171fc35-c67e-4360-b18d-d739ad9b1129"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c32352fe-5149-4b09-aae9-e0cbe8044f71">
+                <propertyInstance
+                  Id="ecf2f61c-f604-4059-ac07-b1663acb9311"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="612d8d75-ff8e-4094-b7da-90b261791cd2"
+            isSubstitutable="false">
+            <classMoniker
+              Id="287fda1a-7dd7-44ce-ac53-e3201ac8f184"
+              LastKnownName="Spliter"
+              LastKnownLocation="Package_1433.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="38ad947e-338f-4943-901c-67d25e815a8d"
+            name="AdjustableSpliter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5c24368f-4456-47f0-ace9-2cbc9568a981"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DAdjustableSpliter Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b08954fc-0590-4a06-97b8-4240a332bf25"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="35ac68d6-f154-4d44-8b64-106297579b4b">
+                    <propertyInstance
+                      Id="167b91ef-aee4-44af-8dc1-015f3f9bd2ba"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="43d1eabb-0c05-4795-8131-0fc97ae56ca1">
+                    <propertyInstance
+                      Id="2c0f5498-7244-4587-9c40-a4fe845968fb"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="527ced2c-7372-4f00-af09-e8fddc162514">
+                    <propertyInstance
+                      Id="94d27e38-b810-431b-af2d-b9f5c193a5ef"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2a4bd377-a4ed-4dca-8c4b-2c4d96c3ca65">
+                    <propertyInstance
+                      Id="dcd6d74f-c94f-49c7-9ea0-f795936c913a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="807afffa-efa6-47a9-816e-81bfb41f1c42">
+                    <propertyInstance
+                      Id="a1041ce1-273e-406a-bf51-6deb59fa461f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b3d93098-4fdf-4ed1-8198-29a948c32f08">
+                    <propertyInstance
+                      Id="e17b4383-a08b-4f34-be1c-774d40cee930"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="832c1538-7596-4208-9de8-0badb784e546"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="5da2c4cb-9930-4ffb-b8ea-6be3625c1152"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DAdjustableSpliter Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="62088594-ea74-4848-8716-57d43f69ab8e"
+                  name="x"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="778fea18-e7ff-4e79-a519-6333b9b3d8ec"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DAdjustableSpliter Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3Dx"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e7837ff0-8840-42e1-a694-afdb58eb2943"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1433.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="52180d6e-0181-458d-a462-f062c9fc3a37"
+                  name="y"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="4d80944a-8dcd-45ae-9548-919cc2a9f001"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DAdjustableSpliter Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3Dy"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e7837ff0-8840-42e1-a694-afdb58eb2943"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1433.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f0677211-51cb-4a7f-b514-413ddfef2760"
+                  name="myPipe"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8adbadf8-ffef-48d8-af37-b654f0143066"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DAdjustableSpliter Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3DmyPipe"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="736af922-30db-4e13-ace9-f6568adb571d"
+                      LastKnownName="Pipe"
+                      LastKnownLocation="Package_1433.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="736af922-30db-4e13-ace9-f6568adb571d"
+        name="Pipe"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="3a374dc1-1a31-4e1e-b33c-4b852ff22647"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d4da0dc7-1df6-4b4b-8a2c-40e676474309"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a11c2544-ba8b-4478-bc28-99fdb6496814">
+                <propertyInstance
+                  Id="2563191c-35fa-45f1-ad60-520855f5899e"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="33e1d661-8cf6-4361-bcdd-cdb49dcd55d4">
+                <propertyInstance
+                  Id="98e1c432-3b7a-43de-afd5-b9a5922e7508"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="022da095-b7ad-4598-9ecc-f9ee96eff3cd">
+                <propertyInstance
+                  Id="cc5b12a7-af35-41c8-af7e-5068e1048524"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="12311fa2-61b8-43ad-a575-0c76d218093a">
+                <propertyInstance
+                  Id="85fd25d3-1275-4d9d-8761-ee7d3316bde3"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d9c2fa88-195f-46f0-b973-9e200b30377f">
+                <propertyInstance
+                  Id="8d347698-4f08-4692-afab-4c2bb1e09d9f"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="314236e7-45ab-4c48-8874-3dbeb66de711"
+            isSubstitutable="false">
+            <classMoniker
+              Id="99a9b145-7e2a-4176-ba3e-a1e364f96549"
+              LastKnownName="Item"
+              LastKnownLocation="Package_1433.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="ed8878d1-9a7e-4e19-acf7-93f729da67c6"
+            isDerived="false"
+            sourceEndRoleName="Pipe"
+            targetEndRoleName="Component"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="5ff3f666-5056-43cf-9c57-adfb9981c8ab"
+              LastKnownName="Component"
+              LastKnownLocation="Package_1433.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c2471440-592a-485e-a3bd-532b85ed9445"
+                  name="Pipe"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="34a2934f-6587-462e-ac9b-99d61b6e802f"
+                  name="Component"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="434d3c4c-d09f-4b04-9237-25132f8b015e"
+                      name="Lower"
+                      value="2" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="cbc28a3f-a22e-4f4a-9791-6198beb7f66a"
+                      name="Upper"
+                      value="2" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="aefc6eee-aecd-4370-a0f4-d51cddb17701"
+            name="compId1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="ed43f624-d64f-454e-8ed1-52350a0f6654"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe Member%3DcompId1"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="254f7233-9e90-4d8b-a600-71fef39a1a93"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be0ea7a8-e17e-4cad-918f-807f45739d52">
+                    <propertyInstance
+                      Id="63802918-8125-4ef4-9032-99977d5f68ee"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="716d6abf-efb3-414e-bc06-36c932519bee">
+                    <propertyInstance
+                      Id="50e34169-ad64-40df-b36b-8c1af21d6187"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6beee8e-df64-4f6a-b7a1-45b1a2bab94b">
+                    <propertyInstance
+                      Id="837779bc-ab5b-44cf-a667-9c0a13854106"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1cdf7db5-2390-4982-a22d-993b3a545ed5">
+                    <propertyInstance
+                      Id="102a617f-ba74-4d1c-855c-4a99e7981f0b"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cba5aafc-e221-4e4a-b763-6d037355a8ae">
+                    <propertyInstance
+                      Id="17362174-363c-4353-80ba-0e27fd4647f8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3be7c25a-4758-42b2-bbd4-59c8e0e9e2b8"
+            name="compId2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6590f33e-99ae-4ce9-97de-2b0b80d33775"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe Member%3DcompId2"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="dd1b528b-4e81-4318-ae64-477e25b96e17"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5ad2258b-6061-4d72-8651-ae9b06ce0edf">
+                    <propertyInstance
+                      Id="af82168f-082d-4786-951c-d08ae95b3971"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6321d1d9-9a04-41ac-8d2d-20d02034d458">
+                    <propertyInstance
+                      Id="a7103050-de84-4a51-98a4-128905419aaf"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5af8099-bc0e-41cc-9a74-a4283cd88afd">
+                    <propertyInstance
+                      Id="c1061e96-9e82-4719-ba21-25ec402c7273"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5d492c3-bc24-4e3f-8d87-c9106c89cd50">
+                    <propertyInstance
+                      Id="7f46a3b6-f00e-45cd-8be5-6f8a2af7942f"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aafa2de0-8d55-4056-9d87-d16f9a5d1dcf">
+                    <propertyInstance
+                      Id="75b5380c-67c0-4487-bddc-ec2ffa920947"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="725dc682-85c2-4058-93b1-b78b0b4d4047"
+            name="currFlow"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="356c64de-5c40-4a72-8f5d-a4cd2477d71c"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe Member%3DcurrFlow"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4921f4e2-0a76-40ee-831f-8a7fc34e6e36"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fcd327b0-31db-4b43-9970-78f64cfef59d">
+                    <propertyInstance
+                      Id="d37b9f0a-9bcf-4e2e-aced-4e80f05a6538"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a1b61b63-aef6-481a-87f2-1af1b95a3867">
+                    <propertyInstance
+                      Id="a729f4ac-5c57-4897-b6fe-424a8daa6acd"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f3c07672-6542-4387-96dd-fe65f080d186">
+                    <propertyInstance
+                      Id="e6d2261d-0aeb-4973-a6f6-1d6e6de91dd6"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6be3be5b-a011-41c8-a051-740433c684b1">
+                    <propertyInstance
+                      Id="65317454-95e5-4033-a7d5-527c619e20d7"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a30ea41b-6fe3-4855-9a72-152a64f0d509">
+                    <propertyInstance
+                      Id="c11c844f-6fdd-416e-9c17-a1b1c8104337"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3b5402e7-75fd-4759-9d26-7b93d5e16018"
+            name="maxFlow"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="da0950a0-c73b-416d-8900-2d46b27a51ac"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe Member%3DmaxFlow"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e78ceb4d-b426-4fb0-8c19-0e06ddcc629c"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="58031d9d-a04f-4d35-be30-98972f8f9ff1">
+                    <propertyInstance
+                      Id="edb80805-bcd2-44de-b82c-d3010de10b3e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4915e840-d834-4abf-9954-caa7f46a5823">
+                    <propertyInstance
+                      Id="ff94ede4-d070-44cc-a530-723eedbeb7b5"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3fa28a7e-b35e-4d86-bc9a-ccbbbc375ac2">
+                    <propertyInstance
+                      Id="2d059b62-9983-4c4b-9e6d-0b37a4c07fed"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f6f946c7-f7f0-4845-9cd0-489050f9a53d">
+                    <propertyInstance
+                      Id="ea7c33a0-5833-4e4c-a8f9-9eedf3d30da2"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e0de1d16-14e7-44e8-888f-bea27d1ba2dc">
+                    <propertyInstance
+                      Id="109e4a77-01e2-4e09-aef8-88ddd8b7db5a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="dd4ade76-e13d-4790-9e06-99363b060100"
+            name="Pipe"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="73c32bfe-75ec-4f7c-ad13-50b7e56a24de"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f6f2cb3c-6220-4167-8d97-84ef1b2f7260"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d873bdf-5062-4476-ac8c-ebc66a1efc92">
+                    <propertyInstance
+                      Id="4605b3f3-1e07-44c2-bff2-37bd0c2e95d6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ea32652-ef8d-488c-96a0-504546253c21">
+                    <propertyInstance
+                      Id="2bade4f9-3d96-43b0-9d12-b587549fb92c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a567a15-5e00-49dd-b14f-3f9cadcae2bc">
+                    <propertyInstance
+                      Id="8b652f35-978b-4018-94ab-dca3ea45c060"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8b7df206-e92a-4bb7-bb1f-6cc0c03ecb7b">
+                    <propertyInstance
+                      Id="3438a9fb-1340-4459-8a17-bf74cecd1662"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="05db2ba2-8978-4af0-8410-16dbedd0bb7f">
+                    <propertyInstance
+                      Id="f74e5868-56d9-4830-af2f-cfa29a4ec266"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe5eada4-73ef-4d0f-9c78-84df6ab58398">
+                    <propertyInstance
+                      Id="91b42a9f-559c-4f51-bf1b-2474df89d431"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7e79b88a-c8d8-4ab7-bd5b-4d86ee085e9b"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="721dd859-7d80-4111-8fba-753ed1c52834"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f551d3fd-cc91-4b5b-a4e8-2ba826381de3"
+                  name="maxFlow"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ed60dd98-918e-475b-bbee-9c2f2884873a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DmaxFlow"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="85d2044c-5418-411a-897a-34efcc9693cf"
+                  name="currFlow"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f216fe2f-ac99-485c-8035-bc026a0ada21"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DcurrFlow"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="287fda1a-7dd7-44ce-ac53-e3201ac8f184"
+        name="Spliter"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="0325daf5-a296-4fa0-a1e8-b46500c84487"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DSpliter"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="325e2517-9a78-4481-a19d-51ca38b25524"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="21cc5ea8-ee4b-46d7-bdc6-b54794e8c192">
+                <propertyInstance
+                  Id="b79fc9ae-5f53-4c88-9fd0-aa9e82ad0f2e"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="91e8cbe6-fd76-421d-9c02-92ecec880584">
+                <propertyInstance
+                  Id="2b619191-7939-4846-9d10-0916db3ff336"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0c951a1b-ec58-4287-b35e-282fa332c56b">
+                <propertyInstance
+                  Id="83f707c1-0577-464a-8cc0-4314e66db799"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="815e3fc7-8b52-42a8-9385-8e0a3cc4eeb1">
+                <propertyInstance
+                  Id="72a83a9c-58d6-433c-8adf-61580af71211"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d9f63d42-65a6-4c92-86a5-ee78dbddf9e2">
+                <propertyInstance
+                  Id="3db8f3ac-1bc6-4ffd-a1b3-20a299c12bf1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="043a0b04-6653-4f5d-927c-fd077fcbfa85"
+            isSubstitutable="false">
+            <classMoniker
+              Id="5ff3f666-5056-43cf-9c57-adfb9981c8ab"
+              LastKnownName="Component"
+              LastKnownLocation="Package_1433.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="ad585a2c-2cbf-42b3-bd81-ef3692908045"
+            isDerived="false"
+            sourceEndRoleName="Spliter"
+            targetEndRoleName="Pipe"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="736af922-30db-4e13-ace9-f6568adb571d"
+              LastKnownName="Pipe"
+              LastKnownLocation="Package_1433.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="37e70884-b1b0-485f-8721-e7b699e04a29"
+                  name="Spliter"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5b5debd4-832c-4a25-84ea-c68453c36ea0"
+                  name="Pipe"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d4f01721-6b37-4665-9836-447ef59ecd98"
+                      name="Lower"
+                      value="3" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d6a0a1f4-3eb7-458b-a455-95ab4172edb9"
+                      name="Upper"
+                      value="3" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="2bd1e18c-d6f6-4d9b-9c20-ccc382e81252"
+            name="flow"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8289875e-6364-4fbc-8739-040970c1053f"
+            name="Spliter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="af31e139-2412-4e93-b74f-32c80312299d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DSpliter Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ea8040da-b409-45fb-b904-df373d5c0e15"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c32948c9-1046-4d1e-93c4-046f3a009832">
+                    <propertyInstance
+                      Id="f66cf4db-6186-4e40-b02a-29bb7b3c3bdc"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa021ee8-32c4-4141-9d6f-275f82fe7a7c">
+                    <propertyInstance
+                      Id="e5756767-4417-4072-8592-5371ee574700"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="63a1768f-1bfd-4dfa-8f08-438ef94f2eff">
+                    <propertyInstance
+                      Id="91968da2-654c-4568-8a6e-5ac682b999e6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86d8bcde-997b-44fd-a224-fa78c0a37d1b">
+                    <propertyInstance
+                      Id="c05f58d1-e6ab-45e1-8c1e-076fb50c7676"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5bdd9ef-b52f-49a4-965c-eb01eb3a94a2">
+                    <propertyInstance
+                      Id="471b5253-2a22-40b8-8c50-d6224606f07c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ed757eb-4957-4fde-ad3a-ba4f0bf552ef">
+                    <propertyInstance
+                      Id="f6b6d425-ce93-4127-a49d-64802779344c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e81f4f61-456f-4484-9b9b-774ce67a5db5"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1e8840e7-a923-4721-a8e6-0f46c1f5c46e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DSpliter Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cc5894b0-6990-436e-b262-b9e5d4654919"
+                  name="x"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b9ac12a8-88f5-4fb2-bd2d-10a01371b542"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DSpliter Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3Dx"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e7837ff0-8840-42e1-a694-afdb58eb2943"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1433.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e0575e10-5d30-4fb5-a63a-00bf4445b55d"
+                  name="y"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="318a21ea-8fb2-4602-936a-462da8f722c7"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DSpliter Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3Dy"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e7837ff0-8840-42e1-a694-afdb58eb2943"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1433.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e36d0737-e11c-4db1-853b-9e6d5bbbe0aa"
+                  name="myPipe"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c25ffdfc-ca2f-4b04-9d7c-c4dc454ac23e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DSpliter Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3DmyPipe"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="736af922-30db-4e13-ace9-f6568adb571d"
+                      LastKnownName="Pipe"
+                      LastKnownLocation="Package_1433.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="47451151-4cd0-43f2-9318-d630ebacde1b"
+            name="calculateFlow"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ed2c067a-12d9-4987-904c-186c5a90cc75"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DSpliter Member%3D(Name%3DcalculateFlow OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f61463d0-4f2b-477e-b555-5d024d7a75f9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ec83d55-77df-4401-b5ea-e61f6ba69dd1">
+                    <propertyInstance
+                      Id="468661db-c88e-4c6a-8d93-50d8c5cf8dab"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8e974595-1e9b-4f39-9494-f1d055533e59">
+                    <propertyInstance
+                      Id="3a151471-bc27-4e7c-9656-88194c80a9b6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71f42cbe-e4f0-46b8-a71f-f2beddde9c70">
+                    <propertyInstance
+                      Id="8cbf7643-7d20-4eb6-a1e8-ac2cf9f71e78"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a78b5aa4-0e4d-435b-8ded-8bbfbd561c48">
+                    <propertyInstance
+                      Id="818616f3-7566-4851-8482-9033e0458b6b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d18c66c-f695-4233-9791-dcf746aa90f7">
+                    <propertyInstance
+                      Id="eeec1b95-4daf-4487-ab93-f73bb660535e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85930329-1177-4b4c-bb9c-29f9949e4491">
+                    <propertyInstance
+                      Id="30a0e438-12df-48e1-bb1b-10f684a3dd39"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="98946ef6-8e62-4225-b45a-da93f111fb2e"
+                  name="flow"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9f7d5683-0531-4e8d-be52-7f67e03cf637"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DSpliter Member%3D(Name%3DcalculateFlow OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dflow"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="73ce4354-d519-4950-b8b5-b7c9410fffd9"
+        name="FormNetwork"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="aa95b2fe-1412-48a0-9ddd-68870c4ec402"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DFormNetwork"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d47f15d9-488e-4965-853f-08851e0c8d8b"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9c954d5c-d549-41c3-a5bf-e955ff7f9367">
+                <propertyInstance
+                  Id="5a2137d8-970f-410a-8b8b-51fe9d4b4b65"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="efe589ee-e644-40ff-90ae-d5b0337a4852">
+                <propertyInstance
+                  Id="da14baee-c0e7-45a8-b1b9-8a7bbd2e9ad5"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1a781a6c-6d69-4399-a5c3-64763b19d7fd">
+                <propertyInstance
+                  Id="ca2390dd-3f20-4c0f-ae55-ea20a755ad79"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8e8af910-f06a-4e9d-8712-b48f58cba1eb">
+                <propertyInstance
+                  Id="f1a28af0-acb9-4149-843c-3736e27e0e8b"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8db8db17-20b3-48ff-bdab-a79336718e4c">
+                <propertyInstance
+                  Id="658a1d12-b42b-480b-b60d-61d8f4dab9fc"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="58eb3115-9bb4-45dd-8656-673cf87cfaa3"
+            isSubstitutable="false">
+            <classMoniker
+              Id="9f248a85-efd8-42f1-8185-37a2e3c52a84"
+              LastKnownName="Form"
+              LastKnownLocation="Package2_1434.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="0f244bb9-5853-4faa-b450-6d94ae49a0d9"
+            isDerived="false"
+            sourceEndRoleName="FormNetwork"
+            targetEndRoleName="Network"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b2558deb-a92a-4ed3-b4c8-4be6877df741"
+              LastKnownName="Network"
+              LastKnownLocation="Package_1433.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="72ac0833-04d4-4261-b8bb-a59323f6d524"
+                  name="FormNetwork"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="30761ddb-3548-4c6e-b39a-8a28dd30708a"
+                  name="Network"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="058da3ab-17ea-4ff1-b067-504d6a85ebeb"
+            name="components"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="815249d0-00fe-4432-ba97-521f061d7de0"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DFormNetwork Member%3Dcomponents"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2a90486c-4bf4-4135-975c-62aacbca9895"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="685f61de-2999-475d-a6fc-b80a66ddea1f">
+                    <propertyInstance
+                      Id="f8687ace-c3e7-4120-be37-8a8d72831c70"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca7a6c25-c6c7-4a88-8cf2-85ef8ca318b5">
+                    <propertyInstance
+                      Id="4ecb2a93-f7e8-4467-b412-73bc08a9ce8f"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a822b4a1-f160-4336-a0d5-d23c272ebd19">
+                    <propertyInstance
+                      Id="2731725e-1463-42d8-9b52-00596b7d814f"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4848e9b7-460d-47d0-83fb-1740ba9b5dcd">
+                    <propertyInstance
+                      Id="ca90b376-76ff-4169-85aa-41aab26de3e4"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="81454be6-1b2e-4c5c-99b8-07eafe8fe35e">
+                    <propertyInstance
+                      Id="27e85507-b165-409e-b771-0ea2231ca38c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="ab68578d-1027-45e9-85c9-7e21b36a26d3"
+                LastKnownName="IContainer"
+                LastKnownLocation="Package_1434.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="ee87a349-293c-4c30-b830-22a71fd18661"
+            name="FormNetwork"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="80c629d9-5a33-401a-9b72-bce646c693c1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DFormNetwork Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8713745e-db36-4d9a-8e12-15cd507972c2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6a41306e-9507-4e5d-a3fd-ec158f568663">
+                    <propertyInstance
+                      Id="d48b917a-470b-432b-93ab-56313f35118b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eefdfe3d-49ce-4fa3-b38a-72fcc035e3b3">
+                    <propertyInstance
+                      Id="ca516d24-e721-4c44-8e41-3ab35fbac964"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c215942-1882-46d0-b7b3-0651e17b89b2">
+                    <propertyInstance
+                      Id="9e0ad537-302b-4bad-9d6a-49d28b146730"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f6744088-0f66-4f8c-9bbf-554fdc21232a">
+                    <propertyInstance
+                      Id="0c7518a4-1964-4cda-8904-10a1fd1fbf2e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ecc55695-b299-4db9-85c9-d40b1586191d">
+                    <propertyInstance
+                      Id="cdf7383a-843b-48f5-86a7-47497c25c2ff"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d6d00880-4e36-4bf7-8d2f-5130e192c6df">
+                    <propertyInstance
+                      Id="4df0d37e-b29f-4c5c-91a3-b83e12e3e070"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="0ebf2866-bc40-464d-b766-2ee053bc19e8"
+            name="Dispose"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="638978a6-8aa2-4f25-859f-4783c34b6397"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DFormNetwork Member%3D(Name%3DDispose OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="49b742c0-43f7-4c0a-8a9a-b14bd425f263"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a281979-19dd-405f-bdec-ed53b692e777">
+                    <propertyInstance
+                      Id="81e88d0c-261c-41c1-832c-d9af7fd71aa5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="00b9bcd0-cf38-4702-a6cb-c31efa30b912">
+                    <propertyInstance
+                      Id="208c52c2-e694-44d2-ba78-fce06a11f82d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28d1038b-afa4-4b6a-afcd-ec79181352fc">
+                    <propertyInstance
+                      Id="2f9fff72-1e73-4aa8-b734-0eb80b0c5dfc"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="afdb4910-6e74-486c-afe9-2c4763485dd9">
+                    <propertyInstance
+                      Id="9ce50954-38fb-47f2-920c-654e8d371f44"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="91a391a8-6714-400e-b0d7-c88cf5a7ab76">
+                    <propertyInstance
+                      Id="5c120c9c-9190-4bd0-bf98-4c89d6b2384e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f20bded-4fe8-4c1e-b018-dd4ffed60490">
+                    <propertyInstance
+                      Id="6ef13cf1-9d9e-4fee-acf7-d94cc7bfa2f0"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="448543f2-d65d-46b9-9e82-c8f86d1d7b07"
+                  name="disposing"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="69e00878-2915-4f91-ae43-3e7eced7e1d7"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DFormNetwork Member%3D(Name%3DDispose OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3Ddisposing"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bb5acca4-242a-48d0-acdf-a314c8f37999"
+            name="InitializeComponent"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3e80ecb7-3fb8-459b-9f74-75d991e60f2f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DFormNetwork Member%3DInitializeComponent"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="99c123fd-e815-4289-903c-d0911f2e14dd"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="88b1a54c-070b-434f-aa86-486f9ac4f4e4">
+                    <propertyInstance
+                      Id="84e6e4b5-0c9c-49ed-ab7b-27e521be50b6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="24217eed-c0ef-4828-ac06-6a70e61d37fd">
+                    <propertyInstance
+                      Id="e17c4735-cd6d-4828-b37c-11547c65b309"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0efc0ec3-615b-4c28-9b70-4c36b6536c0e">
+                    <propertyInstance
+                      Id="f2c4f67e-d7ad-4d40-9dfb-3653354b5dcb"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9732e88-bd4f-40d1-aa4e-1011fdfc2e82">
+                    <propertyInstance
+                      Id="d9641f96-4d2d-4825-a4c5-2abdfe8a63cf"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d689667-e418-4d1a-939e-cc18bb5835e8">
+                    <propertyInstance
+                      Id="e2d4e119-ba5b-4eff-8006-d8fcaf4833e0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b44e5d5f-9e26-4114-a474-dc786752d6d3">
+                    <propertyInstance
+                      Id="ece073f6-3f2c-4b80-ae2d-56360e08ddf3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="99a9b145-7e2a-4176-ba3e-a1e364f96549"
+        name="Item"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="2a825f25-23f9-4815-aca2-80607236ce89"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DItem"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a6ef1dbd-240a-4b97-9c20-c22b534d1c54"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="24bf062c-ef79-43fe-ae3d-0b3787d29a70">
+                <propertyInstance
+                  Id="58ea60d3-faed-4d1a-889f-0c3246b894e5"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1c7232e4-8462-4705-ace1-ff03d5970ad3">
+                <propertyInstance
+                  Id="98deb6aa-4a31-4363-8042-dcc313598618"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8e4fd847-c1ef-453d-8022-7477c4f055e8">
+                <propertyInstance
+                  Id="8231af75-593a-4dbe-8c4a-91129747b5a6"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f96c2448-5293-4800-954a-85b7ec05d285">
+                <propertyInstance
+                  Id="4f53d651-22d8-4f43-a0de-4fc9382de1d1"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="51f22452-ff8c-4958-9b71-beb0cf2b92ab">
+                <propertyInstance
+                  Id="83d88fd3-5f41-4ad2-ac22-f23507062ce8"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="eb5b3672-b0aa-4961-a704-b9b0fe9e597a"
+            name="id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="ee24daba-dd90-4f0a-968a-29574a208655"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DItem Member%3Did"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8011b0d2-3231-4df9-9d4a-43a9b5099008"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b5b96ae-b270-49d9-839b-fbcb890eaf6c">
+                    <propertyInstance
+                      Id="6fd42712-1059-447d-a301-f49b3cbc7fe9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14442300-9639-45d9-b25d-d31a3a52e4e4">
+                    <propertyInstance
+                      Id="f3cffb23-3130-4952-92dc-a9a9b655139a"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3100004-a4a3-4044-ae9f-aeeaa68b8c74">
+                    <propertyInstance
+                      Id="77bffd3b-99a1-4014-b603-c2ceeea9d7a9"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f120a90f-9af5-4eda-a093-f24345ba91ea">
+                    <propertyInstance
+                      Id="1a83323d-00b3-4250-badb-e9e616f3461b"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f89dcd1f-732d-4dfa-9f0c-2d769374a3d1">
+                    <propertyInstance
+                      Id="c158e7f3-f2e7-4f56-8e46-c87b6e64ad23"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e4ab5eec-d6b5-4f98-ba3d-61a749a90826"
+            name="Item"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="52ace737-66bf-41f1-9c60-2504e125277b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DItem Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="270869c4-adbd-408c-862f-d15debbbb793"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7de5fdd7-6c20-4442-b8cb-96ac4a15f8d5">
+                    <propertyInstance
+                      Id="f5a92dd3-c30d-4a0f-8b97-7f7b9a79f23d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="636c7a96-bdf7-4340-9736-f8f297358a42">
+                    <propertyInstance
+                      Id="bb487825-d906-426c-b0b1-e597990da681"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ffab9f0-1743-4557-9a4e-3085aa1ca79f">
+                    <propertyInstance
+                      Id="353903b5-c93a-424f-8d4c-e126972adf51"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="912bcf9d-18c9-4892-8309-ad53012b17c9">
+                    <propertyInstance
+                      Id="d79bb57e-81d9-4c59-81e5-89e6c5754b81"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="870e329e-072b-4e28-8dbb-07d51600574f">
+                    <propertyInstance
+                      Id="842988c2-2b55-4ced-b6a2-d236960afafc"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c611cd9c-533d-4556-a26f-f30170a69557">
+                    <propertyInstance
+                      Id="bc7e6e3d-baf7-4b6b-8f1b-c739dc382c96"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e0c17133-8adb-4aa8-9849-68d79a650ee6"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f373d150-5eec-42f9-a62c-8b9cc9060570"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DItem Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f6712481-22a6-4d94-b25f-b1e15c720584"
+        name="Merger"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="e1243302-3b76-43a6-9f39-d6f55605ce63"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DMerger"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="de19929c-996c-421a-bfe1-d454de34f529"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="68d40449-a69e-458c-ad66-2bedaa4d074c">
+                <propertyInstance
+                  Id="3cd8545b-b6e7-4dab-9702-46dd9235f8be"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="594b4eb5-1f70-4b23-bdf0-d1034032aef6">
+                <propertyInstance
+                  Id="3ba36c19-a864-43cb-921f-ce1861a25a62"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="df2cb2a3-84f7-4505-a4cf-21624ad2292a">
+                <propertyInstance
+                  Id="5deb03e6-6a64-4aa5-b3f3-f0f8ec6ea4b6"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2899fc22-8f4e-4f1c-8479-8dc321f38815">
+                <propertyInstance
+                  Id="cee3fb36-00ca-470c-9c30-18cd40d1b34f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5f0d8176-70e4-4745-95f6-67ff250b25d0">
+                <propertyInstance
+                  Id="fb91a313-2b32-4829-b9f5-30db0d413da7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="326c5d74-50aa-44bd-a503-14fac8fee515"
+            isSubstitutable="false">
+            <classMoniker
+              Id="5ff3f666-5056-43cf-9c57-adfb9981c8ab"
+              LastKnownName="Component"
+              LastKnownLocation="Package_1433.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="44546f65-2fc3-4191-ab23-7a3ada5eee4b"
+            isDerived="false"
+            sourceEndRoleName="Merger"
+            targetEndRoleName="Pipe"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="736af922-30db-4e13-ace9-f6568adb571d"
+              LastKnownName="Pipe"
+              LastKnownLocation="Package_1433.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="29f2eea6-eb7a-4413-9cbb-ab12dd1be0f1"
+                  name="Merger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5b7a3d88-e998-496f-a5bb-207cd873ce40"
+                  name="Pipe"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="71a6dab1-d343-4a0b-a8ae-60ee5188cc31"
+                      name="Lower"
+                      value="3" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="fe4a9e9b-1f93-4302-b7f7-8e6ebf7f7c51"
+                      name="Upper"
+                      value="3" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="809bb5ce-bf5d-49d6-ad1e-1097cbbddf9e"
+            name="Merger"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="40f912a8-b03a-46be-b8e8-3ddef0bb4d98"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DMerger Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d29aabb3-88f6-46e4-a9fc-f05f35dea4fe"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="06d136b4-4fbf-47fd-b3fb-06e6c052312a">
+                    <propertyInstance
+                      Id="c593ecab-5e0b-4815-a34b-5a9e1ce308be"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7869be81-308e-405c-99ac-420ba5bb02af">
+                    <propertyInstance
+                      Id="2b73befe-ecbb-4361-9764-795c8512056b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a790e01c-7d29-4fdc-95c2-588dd4336dd4">
+                    <propertyInstance
+                      Id="fb6a2f1a-c951-477f-b4e2-a8976e647319"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b4f13a30-5901-4b2a-a663-6990c46dc401">
+                    <propertyInstance
+                      Id="7fd1b6d3-cda4-4346-affa-7fbc6730960d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04723114-2c04-41c0-9397-f41fe23136f5">
+                    <propertyInstance
+                      Id="91b36869-c207-4b26-a5d0-9b5e47568682"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1676ec41-4205-4652-800d-f680f5f86e92">
+                    <propertyInstance
+                      Id="b9964fe2-991a-4846-a6c3-42f4bdec5b5b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="2c7cb33f-21ca-4e96-9343-4234dfc46773"
+            name="CalculateFlow"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c2d41f68-81cd-4c01-b4de-5cc74ed8bd80"
+                  name="int upperFlow"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f2b6fbe9-609c-49bb-99b5-5130fca0b0a0"
+                  name="int lowerFlow"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5ff3f666-5056-43cf-9c57-adfb9981c8ab"
+        name="Component"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="baa653cd-8df6-4e21-b223-ebf77078c483"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DComponent"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="52f18fc4-2a23-4eb1-9a95-928bc3698f08"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="23743eab-7f58-4d11-b839-a78bf5a50937">
+                <propertyInstance
+                  Id="81f35354-4186-48ca-8b6c-5d3b47ae1f36"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c1a00a5e-34d2-45e1-b1ba-24a54fada6d1">
+                <propertyInstance
+                  Id="a0174254-f5e7-4b78-bbbb-5437fb13b384"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3bb1a2a8-7db4-43a6-9e3d-530120e81ab0">
+                <propertyInstance
+                  Id="720a7bd1-70ad-4491-8481-3a9d83a7a2fd"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fa5e3368-8010-4a11-acde-1a580545d36b">
+                <propertyInstance
+                  Id="2aed8ec1-48c6-439a-8cc5-caaac1f4e4b9"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="48c09245-781f-4f5f-a14b-a0ff2e840e12">
+                <propertyInstance
+                  Id="a3bbbc13-8bd2-4ac7-b777-e4dfdc50bb88"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="97fa679b-874a-4f95-aba7-3648184535ef"
+            isSubstitutable="false">
+            <classMoniker
+              Id="99a9b145-7e2a-4176-ba3e-a1e364f96549"
+              LastKnownName="Item"
+              LastKnownLocation="Package_1433.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="b1104750-4735-4515-9a70-d34cfc843efb"
+            name="x"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="31642bfd-3d05-46ec-b6f7-b728c34f4555"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DComponent Member%3Dx"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="96b9cb0c-3685-42e9-b9d1-750db7a400c7"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0833c337-b968-400e-8fea-5756007d9ab7">
+                    <propertyInstance
+                      Id="5bab1227-b6f0-4636-9954-f7da5f51a89e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8b45d096-e072-455f-9c52-2df5557e32ce">
+                    <propertyInstance
+                      Id="f54eb915-f66e-4bd5-8f07-fd7525362a38"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67f09b08-982b-468a-bacf-64679faff228">
+                    <propertyInstance
+                      Id="79cb91e8-6499-436d-9bdf-9c06ab30afd0"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a1af70f2-286b-4034-b837-c0b48ec903cc">
+                    <propertyInstance
+                      Id="b851e48a-0e5e-43be-8123-e41a87644619"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1112adfd-4afb-463e-8312-f3a36fc321b3">
+                    <propertyInstance
+                      Id="23575c19-b4a2-427d-a6ae-46e54311060c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="e7837ff0-8840-42e1-a694-afdb58eb2943"
+                LastKnownName="Double"
+                LastKnownLocation="Package1_1433.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8f8eb7ce-7f20-440d-98a8-fdf0b0477666"
+            name="y"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="81d0e88b-e468-404d-9f39-3902731ea987"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DComponent Member%3Dy"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="21d24ca0-6669-4136-afde-4f28636c455d"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7df4f677-e6e7-4559-9f0d-5b5ea9deb667">
+                    <propertyInstance
+                      Id="f770a89f-4269-49dc-aa66-74f194ef66fe"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ce3a1f1-2db7-490b-b7e8-11e2b337bf23">
+                    <propertyInstance
+                      Id="906ee43a-2822-4d56-9e19-c94c80b4ba70"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5c5c7a7-f40f-40fe-8f44-10997125f231">
+                    <propertyInstance
+                      Id="34cb165e-d0e1-48bb-b3d5-d125b4e1149d"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c29beeb3-e1be-4e1b-9a2e-05777667a0f7">
+                    <propertyInstance
+                      Id="cabaa82f-a02d-4c1d-b80a-e378721889cc"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="181941f3-3f6a-43ed-ba9d-fbfd8d783087">
+                    <propertyInstance
+                      Id="4ff2daf9-6a96-4f49-8f60-b74b881f2e69"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="e7837ff0-8840-42e1-a694-afdb58eb2943"
+                LastKnownName="Double"
+                LastKnownLocation="Package1_1433.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9b8ce026-1d03-48a3-8dfc-6dbef574b1fd"
+            name="size"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="d550e993-c167-4db2-a6f0-c4f2b6e6c7f0"
+                LastKnownName="Double"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="ae6d8938-ed00-424f-8029-983e903e6cc3"
+            name="Component"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b6adaa38-d72c-41cf-806d-def4620f19fe"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DComponent Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="65b38ee5-0809-4ee9-b1d9-78434e5abc4c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f10a8242-f7a3-4ebf-b282-b3986785bfcc">
+                    <propertyInstance
+                      Id="15d04b2b-9d19-4cdb-aa87-381eb718f885"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ff43759-69ea-4b76-8893-4cff73042731">
+                    <propertyInstance
+                      Id="8b85688d-feb3-40ab-9427-a7b81f41a62d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e0661c0-bea2-4ebe-be2a-ce08e6aaba69">
+                    <propertyInstance
+                      Id="f82e485f-6085-42ad-9ae9-517acdd08859"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3481d836-1569-4b9d-8178-4d32b5dce5f6">
+                    <propertyInstance
+                      Id="fd86d311-486b-4097-a91d-84051dd42b93"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7645650e-79da-47a1-be22-e30d2deccf11">
+                    <propertyInstance
+                      Id="32c31436-0c7c-4ddc-ae03-0996b20aafc3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="430f4f56-ea90-415b-b3ac-aba6f5b6bded">
+                    <propertyInstance
+                      Id="917a7d4e-24fe-4587-93b8-32968b8ef63c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="491395ba-2390-48d4-9629-4c428a50fac1"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="436b56f0-743b-486d-b376-cd9a042bdb3d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DComponent Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5cf98b2f-3109-40cd-a32e-d768fa53adfc"
+                  name="x"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6a9c6415-bc41-4bb3-bb8f-6641cb6ed16e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DComponent Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3Dx"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e7837ff0-8840-42e1-a694-afdb58eb2943"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1433.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="451ae558-cba4-4ebf-bfdc-7c9c141cf5a9"
+                  name="y"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f120eb07-9143-4a84-9cb8-abf94ab54b42"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DComponent Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3Dy"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e7837ff0-8840-42e1-a694-afdb58eb2943"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1433.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="51052d7c-d535-4069-b290-81a856c15280"
+                  name="myPipe"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="28a545c4-06e1-422a-9e1a-4146bde7aa75"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DComponent Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3DmyPipe"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="736af922-30db-4e13-ace9-f6568adb571d"
+                      LastKnownName="Pipe"
+                      LastKnownLocation="Package_1433.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2239eedc-3026-4416-817d-01b255d301aa"
+            name="DrawMyself"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0b6b87bd-9321-45e2-9a36-6b453ac2114d"
+                  name="x"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9dcacd80-6bfb-4175-aeb5-482b2869b9a3"
+                  name="y"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="af3c2cd1-c40f-499f-a6d5-1bef5de30755"
+        name="Pump"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="66a46fd5-1b01-41f7-8927-98599d0394a4"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPump"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="50806ce6-00cf-442e-a5ea-a0974a7ecb5e"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2fada6a2-fa38-4bf6-8ca7-ec74c8a4a9ac">
+                <propertyInstance
+                  Id="9974c9f6-dfea-4993-9aa6-97bafe87084c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1054d064-e71c-42b7-a202-ec49119adcaf">
+                <propertyInstance
+                  Id="c9854812-0c7c-4d2d-bfa0-11d1342ceebb"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c6baca3f-20cb-48c5-923d-8765aec0178e">
+                <propertyInstance
+                  Id="3ce7a391-3eb8-49fb-935d-ae1313db6eea"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="171a235a-dc51-4002-be37-219a7bdbce5b">
+                <propertyInstance
+                  Id="3d8d6950-bf09-4dfb-bfa8-0702c833ffa5"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8eabebc6-def2-4a1f-870e-13f2c0a87404">
+                <propertyInstance
+                  Id="0936e93f-8e54-49ca-b32f-a60332ecee8d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="30ed31e4-c2e3-4aa3-b8b3-5d5a93bf34a7"
+            isSubstitutable="false">
+            <classMoniker
+              Id="5ff3f666-5056-43cf-9c57-adfb9981c8ab"
+              LastKnownName="Component"
+              LastKnownLocation="Package_1433.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="8fd53b11-2a38-4dd2-948d-4116d87f9bef"
+            isDerived="false"
+            sourceEndRoleName="Pump"
+            targetEndRoleName="Pipe"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="736af922-30db-4e13-ace9-f6568adb571d"
+              LastKnownName="Pipe"
+              LastKnownLocation="Package_1433.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7d282758-4ac6-43e1-9aa8-1b836ef7b00f"
+                  name="Pump"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f67b1d4f-53ee-465b-a031-d7355b933b9c"
+                  name="Pipe"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="3e5ec0d0-1925-4ced-8a1c-ce059570ee0b"
+            name="currFlow"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="b38405c8-acb4-4792-aa44-38d7692b786e"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPump Member%3DcurrFlow"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="54038045-a4d4-40f3-8b6f-e54b66397f32"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16f4782c-fb11-4243-8223-91db7c8176c0">
+                    <propertyInstance
+                      Id="a874199a-b149-4cff-bf11-40b29b54f6f5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f35d210e-9b7b-4731-ae77-161a0e035d6f">
+                    <propertyInstance
+                      Id="ddf0988d-d08a-47d3-8f01-7fea496d27fa"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8244c177-40d2-49b4-b0e5-2ca0ffebdbb6">
+                    <propertyInstance
+                      Id="aef8e3d2-ccbb-4dd5-9b57-00e08f2df115"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f883331-3782-483d-82ed-cb53babd9b95">
+                    <propertyInstance
+                      Id="5f012146-ef05-4465-aa0a-ffcd200b4840"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2df949bd-22ba-46c3-bf13-addedfcde777">
+                    <propertyInstance
+                      Id="e7bc0b55-e9af-46ea-8857-6bdf27c52e27"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a705341d-a410-4245-ae29-660f5838a0c4"
+            name="maxFlow"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="4687b8cf-f395-49b9-a3d5-887aed8cc926"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPump Member%3DmaxFlow"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="26d501c3-3fde-4f84-b290-ff57d405e5f7"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ed0af7d-c4f7-4882-ad35-f87d864c674b">
+                    <propertyInstance
+                      Id="c7d9c41f-c574-4b2e-8be6-0816c72c3e29"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d1007cd3-a539-4148-8f9b-b20d6dc38f3e">
+                    <propertyInstance
+                      Id="869a14bb-46e7-4eaf-adcb-d5d4fc5ec34f"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="691c47e1-33ac-4a69-b77b-362606f4f46e">
+                    <propertyInstance
+                      Id="7134e14e-b3be-4bb2-bd4f-ca743e7f6abe"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8cd13447-2bd4-44a0-b080-53c1456bc93c">
+                    <propertyInstance
+                      Id="b7150654-06a1-447b-8a37-9e05ebaaa7e3"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f6f41a9e-c789-4e78-9d49-681ba61a4576">
+                    <propertyInstance
+                      Id="54685934-58b0-47a9-8782-5b0760adffa7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="d20c8823-9d2d-473d-a95a-fc2cf1ed158b"
+            name="Pump"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5cd944eb-f02b-4ecb-ab55-dbf6f26a9a7c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPump Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7a8c8419-273f-4f54-ade2-acabef285e59"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9838faaa-05e5-4df5-b92b-c55400392ce4">
+                    <propertyInstance
+                      Id="a784d30d-fded-4b82-8ade-389cf60e2471"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a55b22f6-10a9-4775-bca3-fe287916d5c6">
+                    <propertyInstance
+                      Id="762ffd51-1d82-45ce-a823-1a68a310cb48"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="865c6b10-9d32-466b-bde9-345622a08819">
+                    <propertyInstance
+                      Id="0f0fa436-fd62-4285-bd1c-c5729063611f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab44dc4f-f663-4c05-807c-841abe128f46">
+                    <propertyInstance
+                      Id="14f106ed-80f4-429f-95ee-3c713259342b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cffc05ea-53a3-4394-b02d-20dcbd3eb04f">
+                    <propertyInstance
+                      Id="d0303989-42ab-493a-ab2a-85146089db7a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd8b443b-bcdf-4987-b075-efe233ec1d7b">
+                    <propertyInstance
+                      Id="4b0de8b1-3b3a-418f-8d9c-235dd7400cdd"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b4a3c022-d040-4b03-837e-95f32177153c"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b569e46e-b323-4c6c-aab3-260fc66ea8e8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPump Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4a73beb3-3518-44d4-a613-815b2892e8ee"
+                  name="x"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a8fe2bb3-0243-41c0-be0d-984587eefbe8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPump Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3Dx"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e7837ff0-8840-42e1-a694-afdb58eb2943"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1433.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a02fd8a9-df90-4b14-b132-73a725ba6ab5"
+                  name="y"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="09db94ce-695b-45e9-84a5-8099bd81a389"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPump Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3Dy"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e7837ff0-8840-42e1-a694-afdb58eb2943"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1433.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="74492452-cbb1-47b3-b29b-c4cf7e2e0b55"
+                  name="myPipe"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8da39b1d-38a5-4966-8162-7a5ba905982d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPump Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3DmyPipe"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="736af922-30db-4e13-ace9-f6568adb571d"
+                      LastKnownName="Pipe"
+                      LastKnownLocation="Package_1433.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8fd5de42-6896-4fb8-9828-86a2a8288382"
+        name="Sink"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a820b0fd-0fc7-4cbf-bd3b-e7cce5fc2044"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DSink"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="cc5a6891-bff0-4001-b0ed-883fec254a40"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8f0fccfe-d7f2-4a6b-8642-9cb5db7bad04">
+                <propertyInstance
+                  Id="51340902-6164-4026-8185-7e6a0bcabb3d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5a07e332-d0e5-46c7-96b8-a34f7ef0f457">
+                <propertyInstance
+                  Id="ca3ed330-c5e9-40a3-a8cd-0105e1479ff5"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4d182500-188b-4297-a9f5-7775f40e5ed3">
+                <propertyInstance
+                  Id="23d18feb-7f1b-4639-af6a-c8ce23ff6f4d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="aa62600c-bfb8-4b7d-bd04-b2edd7045786">
+                <propertyInstance
+                  Id="516b30a6-fc30-425a-8c86-b8f0fe82b0be"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3ded1542-5355-4ce8-9294-3c7f39a0d2fc">
+                <propertyInstance
+                  Id="afcefc06-a3c5-46c1-bad6-23f0688ecad4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="040ff5da-0035-47f6-8d9e-2dd05553d279"
+            isSubstitutable="false">
+            <classMoniker
+              Id="5ff3f666-5056-43cf-9c57-adfb9981c8ab"
+              LastKnownName="Component"
+              LastKnownLocation="Package_1433.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="259bd72f-a024-436b-8512-ff396e6e0ef2"
+            isDerived="false"
+            sourceEndRoleName="Sink"
+            targetEndRoleName="Pipe"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="736af922-30db-4e13-ace9-f6568adb571d"
+              LastKnownName="Pipe"
+              LastKnownLocation="Package_1433.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9a75e594-ee65-41d7-8f42-beee526ef5c2"
+                  name="Sink"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f3be7e58-fd8b-49da-951a-39d05162b102"
+                  name="Pipe"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="4c0ea46d-44cc-4214-88ae-88fe4f523e32"
+            name="currFlow"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="725c3168-fa40-4362-8453-b173163514ce"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DSink Member%3DcurrFlow"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="20a0862d-d271-49b9-bb09-1e16f73d4825"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="26c923cc-096d-447a-bfcf-08dd2cc8569f">
+                    <propertyInstance
+                      Id="c1215754-f386-4814-9cb6-979c0979d191"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2d8895be-db47-48d2-b938-ca1edad1b117">
+                    <propertyInstance
+                      Id="bf81371f-dda4-47da-b374-bf5b49c8e4dd"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e8e59e8-354f-4919-8366-5666c9b8e5ad">
+                    <propertyInstance
+                      Id="b7cf683c-0017-486a-b3bb-da96d080a1b5"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4bc38885-ede3-43ab-939e-950a9fdbfacb">
+                    <propertyInstance
+                      Id="347e66bd-9707-423d-bec9-89cc1b96af57"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="60a90d9f-0417-45c2-87ed-ad525ee303a6">
+                    <propertyInstance
+                      Id="c36feebc-72e4-4825-904d-3e248f73b24b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="2f6599f2-57c4-4e15-b519-db064d7862b4"
+            name="Sink"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="526ca0aa-1462-473e-a2d2-c24d73503487"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DSink Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="70323651-bb6d-4647-b1c4-0312948df63b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0fc794a-43d6-4689-a837-9947ca34c90d">
+                    <propertyInstance
+                      Id="e6613cb8-44a5-419f-9103-8c953d27021e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31adc283-b901-456a-8349-077c3df9eecd">
+                    <propertyInstance
+                      Id="a7341745-535b-4e66-8d75-bf8faa9e18d6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b7bc4d6f-d662-4296-8379-5a58c3b160f5">
+                    <propertyInstance
+                      Id="a0bfca73-3bcc-4eeb-b9ad-844277d837cb"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6f9fdb7-5f01-4d0d-bf29-2eee105307d7">
+                    <propertyInstance
+                      Id="c061edb2-9aa2-4814-bc4b-11a9ee8e6212"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0b6e2ddb-b098-4c70-b183-15b29f4481a0">
+                    <propertyInstance
+                      Id="c2088a6e-73e4-4747-b66b-5d7c3e004bb5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9722d12f-f2b9-4fab-ab22-3243d65fdd32">
+                    <propertyInstance
+                      Id="0980ed3e-f607-4979-997e-3de807aa3875"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2b1686c4-7b7a-4481-8c54-f87912a682d7"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f7b5c15a-0172-40be-bc72-869d4e219b2c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DSink Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9fed0987-b5c0-439b-82eb-f53d7f2cf608"
+                  name="x"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e191fdd3-d8b2-4a63-8202-cc60c32d8e6f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DSink Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3Dx"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e7837ff0-8840-42e1-a694-afdb58eb2943"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1433.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4549bfcd-3eed-4016-baf8-1267090b5740"
+                  name="y"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c58c20ac-3560-4af9-8bb2-a58e85dd490c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DSink Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3Dy"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e7837ff0-8840-42e1-a694-afdb58eb2943"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package1_1433.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="756ef3ef-a7bf-46c0-bce1-650dcd357bd9"
+                  name="myPipe"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6008f689-c976-4b90-8d14-0f4232e04ab4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DSink Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DPipe)]) ParameterIdentifier%3DmyPipe"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="736af922-30db-4e13-ace9-f6568adb571d"
+                      LastKnownName="Pipe"
+                      LastKnownLocation="Package_1433.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b2558deb-a92a-4ed3-b4c8-4be6877df741"
+        name="Network"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c9d2ecfa-7a71-4c02-b32a-accc640a1435"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DDrawingBoard"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="0854f1c7-2567-4346-9ce7-4c433e021561"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d013ec85-ea5c-4c11-96e6-1da3134e174b">
+                <propertyInstance
+                  Id="9e8de1aa-008c-4381-b821-622f281cb018"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f557b3e5-d352-4e61-a3eb-9f337f070372">
+                <propertyInstance
+                  Id="33461d85-6c8a-42ee-9049-1ad89bec07a5"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bcfb4690-984c-44d7-b440-2e246aa315b4">
+                <propertyInstance
+                  Id="13d6e427-241d-4ba9-8b74-7611d64e900a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1f8aedb3-2341-4cac-8ec9-287e8f563ad5">
+                <propertyInstance
+                  Id="98e8fa1b-a07f-43c2-b373-c52466e8514f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f92eb3e1-19f5-4d3f-af7f-9065a4eb6504">
+                <propertyInstance
+                  Id="780238dc-4bf0-4330-b154-4c3633117b7f"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="19e43d0a-9d77-4b61-9a8a-f07ca781291d"
+            isDerived="false"
+            sourceEndRoleName="Network"
+            targetEndRoleName="Item"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="99a9b145-7e2a-4176-ba3e-a1e364f96549"
+              LastKnownName="Item"
+              LastKnownLocation="Package_1433.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="90752b74-2e77-4a2a-a447-cff8358663b7"
+                  name="Network"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3da88f40-2532-4914-90a3-a91022c0f0c2"
+                  name="Item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="8771b743-81f7-4ee9-a903-22c54c373bca"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="6de166f8-941c-4916-a7ce-81a01a90a464"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e9c2751c-22da-4d2f-8e8f-30f240e71c2c"
+            isDerived="false"
+            sourceEndRoleName="Network"
+            targetEndRoleName="FormNetwork"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="73ce4354-d519-4950-b8b5-b7c9410fffd9"
+              LastKnownName="FormNetwork"
+              LastKnownLocation="Package_1433.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="44a8cacc-7674-4952-952c-c9b046e18ce9"
+                  name="Network"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c04bed0d-ad5d-4539-9d67-954a40d6c78a"
+                  name="FormNetwork"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="2ef0552b-4f26-4f2d-bf13-842df1ee3667"
+            name="DrawingBoard"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="56d75a62-0d0e-48db-a810-f6a7b3cbdcfb"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DDrawingBoard Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4238982a-4b4b-4260-8bec-b5fb79247bd6"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c41d00e8-5524-4169-95b4-a92eda593c1b">
+                    <propertyInstance
+                      Id="8f330932-5fcb-444c-9644-85c60cc364ac"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d5d9252d-ce67-42cc-b1eb-2b14350dfffb">
+                    <propertyInstance
+                      Id="ce5df903-0f10-4c08-91cd-1e7bbf077df8"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6cc7e59-8eb8-4d32-9577-0cba2efe8fef">
+                    <propertyInstance
+                      Id="4a5eee4a-3d93-4a5d-9a3b-ecb3e74c782c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6703d57-16ff-4ccd-9ab4-7ab2d48d0999">
+                    <propertyInstance
+                      Id="b6288ddf-7893-41b3-bac4-20a91e603a8d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a3b094fa-2a42-4f50-beda-07f13199ecc9">
+                    <propertyInstance
+                      Id="9b61b915-536a-4758-aa09-4e2a2fef79b7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6886dde8-d892-4978-bae3-ea3a4e74815c">
+                    <propertyInstance
+                      Id="0a197516-4eee-4707-b879-6449925e720d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="5d63d5df-23e7-4635-8e54-83c2d06545e7"
+            name="Load"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a731ca25-55d7-46fb-96e0-56441b679eef"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DDrawingBoard Member%3DLoad"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4b5bc809-f2aa-434d-b731-6fcb718e2920"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6295d24-e8b1-43ad-97f7-506bd2654a96">
+                    <propertyInstance
+                      Id="ca6711cd-4694-4e59-9fca-ea014ed70107"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57bcb958-b4a4-4d3f-9129-2227d66ee1ae">
+                    <propertyInstance
+                      Id="a0c8c0a9-0191-4472-97a2-44f2498f1e96"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2956774-ed9a-486c-a9f9-a3d457ede73b">
+                    <propertyInstance
+                      Id="19124604-3ebc-4a33-b52a-52fcb83b5c05"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bade2f61-3838-4311-ab1a-bf8fe3f7860b">
+                    <propertyInstance
+                      Id="0efd8b1a-bfd3-4002-ac47-a3670962538f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4a4ac08a-996a-4da6-a13b-7b4ea8d4860b">
+                    <propertyInstance
+                      Id="52b1b45e-3c2e-4aa1-9a9e-57080b78e7fa"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7ab10d5-a975-4077-9f5a-fff2de05c6f0">
+                    <propertyInstance
+                      Id="05b27798-45be-41a9-87b0-a4e22b0503a5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5a33dc42-6624-4759-84e7-e22104153735"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bba88a1c-48cf-4e96-92f1-d614737f35da"
+            name="Remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1775b5d6-cc1d-4542-93fc-cfdd630db78e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DDrawingBoard Member%3DRemove"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="91560728-4d32-464a-8356-e9ce8b121471"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d79dbbf6-951c-478b-9605-3ad1f03a6856">
+                    <propertyInstance
+                      Id="571f1ab5-82d1-4c57-8cc5-559931f968bd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85ee37b4-bf70-4def-b878-49f5ec594f46">
+                    <propertyInstance
+                      Id="7a79c0a0-6cb9-44af-a9f7-538729bf39c1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="279ac10e-0ac7-4987-9b1b-b94a3095d5ae">
+                    <propertyInstance
+                      Id="83aeccc8-b096-40ed-b5a1-c01a3bdd22ea"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c4257d7e-1fe2-4a26-a8c3-884e0a3ca737">
+                    <propertyInstance
+                      Id="1261ceb8-4527-468f-911f-59d014dfe538"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c0b1b091-aea8-489e-b9bf-c2b535bcbe36">
+                    <propertyInstance
+                      Id="f34e1136-e8e6-4df5-a2e3-446f10a8e8b9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba27622e-3dd7-40f7-956d-db6992586a3b">
+                    <propertyInstance
+                      Id="10515be5-a899-4f4a-9bd6-6a5a52aed41d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5bae0769-a250-4dc7-b1a1-4cd29b228c0d"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8a96d9ba-7e0d-4730-932f-14806b0ced50"
+            name="Reset"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="94ad5fb3-9212-423c-8025-c52a3726ccc5"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DDrawingBoard Member%3DReset"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c7cbf32a-f9f6-42cd-8e46-2429fb1d05e6"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d439728-0070-4833-b5d5-0f823be02dfc">
+                    <propertyInstance
+                      Id="5c52dc8e-9240-488c-9776-ac2c900c26cf"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c53bf9a-5daf-48b4-93ca-a7a9e4704260">
+                    <propertyInstance
+                      Id="e64e1892-fcff-4b50-a57e-55d4473fc099"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0b0398e-3b06-456a-a442-28fb8541a425">
+                    <propertyInstance
+                      Id="2243458a-9364-462b-8a87-4d1bdeca2c4d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="afebce1b-6724-4685-96a4-d2d321adfdbc">
+                    <propertyInstance
+                      Id="147194a4-712b-4ab0-8edc-578844af5b12"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="43da775a-1bec-49a1-be82-e55be3f6f716">
+                    <propertyInstance
+                      Id="63937e7c-597e-4a88-b1c6-aa0c3f411157"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9524445-b35b-495e-8f34-c07cd02d3fac">
+                    <propertyInstance
+                      Id="6548d676-c66d-49c6-8d54-52f2672010bd"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="52ff2afd-b7ec-4928-9ac1-b5a88560b110"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="532187f6-8dbd-4468-aaca-0e2b9d56450d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2Fc:%2Fusers%2Fromina%2Fdocuments%2Fvisual studio 2013%2FProjects%2FFlowNetwork%2FFlowNetwork%2Fbin%2FDebug%2FFlowNetwork.exe&quot; Namespace%3DFlowNetwork Type%3DDrawingBoard Member%3DSave"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="139f6e82-62c1-4675-bafa-2be36bd342fe"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="258d3536-7dca-40c2-829f-efa3766b7475">
+                    <propertyInstance
+                      Id="d45c7f66-71fa-4956-a686-bbafc64346ab"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="43e98fac-8c7b-47cf-b330-afb487f56b91">
+                    <propertyInstance
+                      Id="08fb26e5-cc5c-4d74-aa7d-a06360933e8b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="55afb3bb-92d5-4769-94d5-ffe73d4fcc2a">
+                    <propertyInstance
+                      Id="5d8d0190-f1a3-4de1-a176-831f554badc6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="09638a49-c001-4682-8568-404fb4255d05">
+                    <propertyInstance
+                      Id="4c696d50-f875-477c-9e52-8378270c4348"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c12f4fb-271b-40de-9901-169eda2110a1">
+                    <propertyInstance
+                      Id="730799c7-8496-46ff-87d6-72ac47253f6d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="feebdebc-284c-4924-9b8e-0027852d30c8">
+                    <propertyInstance
+                      Id="57de933d-2cb9-469a-95ef-d04fd50bad7a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

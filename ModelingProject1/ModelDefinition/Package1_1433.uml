@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="daacfdd3-ccac-4854-a200-185dd9531410"
+  name="System"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="8f092e93-1bb0-4a27-8c47-8a08d4efed44"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="e7837ff0-8840-42e1-a694-afdb58eb2943"
+        name="Double"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="99dd98b3-ea97-4cb5-90d1-348b403d0060"
+            handle="viewcode://./CodeSchema_Struct?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6e5574bb-f7d7-45b6-9168-d376f0412268"
+            name="struct"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0d6135e6-e5bd-4865-bd42-baf4692b97ba">
+                <propertyInstance
+                  Id="fe15d0fd-91aa-41ef-a3f4-0b4cfe587119"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="47bacf05-bdbc-4de6-9995-fdd2c78a5ead">
+                <propertyInstance
+                  Id="90d33c82-7033-4713-85fb-009654db4d31"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d16d3a41-68e9-4f31-b5f2-6b2cf3184868">
+                <propertyInstance
+                  Id="3e28f559-fc16-4723-98d3-858a162e9ecb"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fcd00f19-24dd-4338-97ba-6623990b6f6f">
+                <propertyInstance
+                  Id="fc5c9741-bc52-425d-b8b1-0ed1ded43fe3"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="eee9718c-e448-4770-a510-62e929684eee"
+        LastKnownName="ComponentModel"
+        LastKnownLocation="Package_1434.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="4807b17b-3e80-4347-8038-6325ac6642f3"
+        LastKnownName="Windows"
+        LastKnownLocation="Package1_1434.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="8aac339d-e5eb-42a5-867c-1aac320d166c"
+        LastKnownName="Drawing"
+        LastKnownLocation="Package3_1434.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="237a53e5-b520-4369-8557-68e607bb5829"
+        LastKnownName="Collections"
+        LastKnownLocation="Package4_1434.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

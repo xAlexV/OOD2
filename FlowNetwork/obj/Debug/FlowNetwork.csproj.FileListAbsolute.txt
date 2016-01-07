@@ -1,0 +1,7 @@
+c:\users\romina\documents\visual studio 2013\Projects\FlowNetwork\FlowNetwork\bin\Debug\FlowNetwork.exe.config
+c:\users\romina\documents\visual studio 2013\Projects\FlowNetwork\FlowNetwork\obj\Debug\FlowNetwork.csprojResolveAssemblyReference.cache
+c:\users\romina\documents\visual studio 2013\Projects\FlowNetwork\FlowNetwork\obj\Debug\FlowNetwork.FormNetwork.resources
+c:\users\romina\documents\visual studio 2013\Projects\FlowNetwork\FlowNetwork\obj\Debug\FlowNetwork.Properties.Resources.resources
+c:\users\romina\documents\visual studio 2013\Projects\FlowNetwork\FlowNetwork\obj\Debug\FlowNetwork.csproj.GenerateResource.Cache
+\\vmware-host\Shared Folders\Desktop\FlowNetwork\FlowNetwork\bin\Debug\FlowNetwork.exe.config
+\\vmware-host\Shared Folders\Downloads\FlowNetwork\FlowNetwork\bin\Debug\FlowNetwork.exe.config
