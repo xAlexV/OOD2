@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonMerger = new System.Windows.Forms.Button();
+            this.buttonSplitter = new System.Windows.Forms.Button();
+            this.buttonSink = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbflow = new System.Windows.Forms.TextBox();
@@ -50,27 +50,27 @@
             this.btsave = new System.Windows.Forms.Button();
             this.btload = new System.Windows.Forms.Button();
             this.btsaveas = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblSelectedComponent = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel1.Controls.Add(this.lblSelectedComponent);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.buttonMerger);
+            this.panel1.Controls.Add(this.buttonSplitter);
+            this.panel1.Controls.Add(this.buttonSink);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.tbflow);
@@ -80,6 +80,50 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(209, 524);
             this.panel1.TabIndex = 0;
+            // 
+            // buttonMerger
+            // 
+            this.buttonMerger.BackgroundImage = global::FlowNetwork.Properties.Resources.merger;
+            this.buttonMerger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonMerger.Location = new System.Drawing.Point(26, 266);
+            this.buttonMerger.Name = "buttonMerger";
+            this.buttonMerger.Size = new System.Drawing.Size(64, 65);
+            this.buttonMerger.TabIndex = 18;
+            this.buttonMerger.UseVisualStyleBackColor = true;
+            this.buttonMerger.Click += new System.EventHandler(this.buttonMerger_Click);
+            // 
+            // buttonSplitter
+            // 
+            this.buttonSplitter.BackgroundImage = global::FlowNetwork.Properties.Resources.splitter;
+            this.buttonSplitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonSplitter.Location = new System.Drawing.Point(26, 195);
+            this.buttonSplitter.Name = "buttonSplitter";
+            this.buttonSplitter.Size = new System.Drawing.Size(64, 65);
+            this.buttonSplitter.TabIndex = 17;
+            this.buttonSplitter.UseVisualStyleBackColor = true;
+            this.buttonSplitter.Click += new System.EventHandler(this.buttonSplitter_Click);
+            // 
+            // buttonSink
+            // 
+            this.buttonSink.BackgroundImage = global::FlowNetwork.Properties.Resources.sink;
+            this.buttonSink.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonSink.Location = new System.Drawing.Point(26, 124);
+            this.buttonSink.Name = "buttonSink";
+            this.buttonSink.Size = new System.Drawing.Size(64, 65);
+            this.buttonSink.TabIndex = 16;
+            this.buttonSink.UseVisualStyleBackColor = true;
+            this.buttonSink.Click += new System.EventHandler(this.buttonSink_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::FlowNetwork.Properties.Resources.pump2;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(26, 53);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(64, 65);
+            this.button1.TabIndex = 15;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label7
             // 
@@ -95,7 +139,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.label6.Location = new System.Drawing.Point(112, 279);
+=======
+            this.label6.Location = new System.Drawing.Point(112, 300);
+>>>>>>> 9e22d749dcc973fbbe2a58c6df17e2453ed781ec
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 17);
             this.label6.TabIndex = 13;
@@ -105,7 +153,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.label5.Location = new System.Drawing.Point(112, 195);
+=======
+            this.label5.Location = new System.Drawing.Point(112, 219);
+>>>>>>> 9e22d749dcc973fbbe2a58c6df17e2453ed781ec
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 17);
             this.label5.TabIndex = 12;
@@ -115,7 +167,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.label4.Location = new System.Drawing.Point(112, 114);
+=======
+            this.label4.Location = new System.Drawing.Point(112, 148);
+>>>>>>> 9e22d749dcc973fbbe2a58c6df17e2453ed781ec
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 17);
             this.label4.TabIndex = 11;
@@ -125,7 +181,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.label3.Location = new System.Drawing.Point(112, 40);
+=======
+            this.label3.Location = new System.Drawing.Point(112, 77);
+>>>>>>> 9e22d749dcc973fbbe2a58c6df17e2453ed781ec
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 17);
             this.label3.TabIndex = 10;
@@ -139,6 +199,7 @@
             this.pictureBox5.TabIndex = 9;
             this.pictureBox5.TabStop = false;
             // 
+<<<<<<< HEAD
             // pictureBox4
             // 
             this.pictureBox4.Image = global::FlowNetwork.Properties.Resources.merger;
@@ -179,6 +240,8 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+=======
+>>>>>>> 9e22d749dcc973fbbe2a58c6df17e2453ed781ec
             // label2
             // 
             this.label2.AutoSize = true;
@@ -232,6 +295,8 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(560, 431);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // btremove
             // 
@@ -289,11 +354,32 @@
             this.btsaveas.Text = "SAVE AS";
             this.btsaveas.UseVisualStyleBackColor = false;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "You have selected a:";
+            // 
+            // lblSelectedComponent
+            // 
+            this.lblSelectedComponent.AutoSize = true;
+            this.lblSelectedComponent.Location = new System.Drawing.Point(118, 7);
+            this.lblSelectedComponent.Name = "lblSelectedComponent";
+            this.lblSelectedComponent.Size = new System.Drawing.Size(0, 13);
+            this.lblSelectedComponent.TabIndex = 20;
+            // 
             // FormNetwork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(845, 546);
+=======
+            this.ClientSize = new System.Drawing.Size(845, 548);
+>>>>>>> 9e22d749dcc973fbbe2a58c6df17e2453ed781ec
             this.Controls.Add(this.btsaveas);
             this.Controls.Add(this.btload);
             this.Controls.Add(this.btsave);
@@ -306,10 +392,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -323,10 +405,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbflow;
@@ -338,6 +416,12 @@
         private System.Windows.Forms.Button btsave;
         private System.Windows.Forms.Button btload;
         private System.Windows.Forms.Button btsaveas;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonMerger;
+        private System.Windows.Forms.Button buttonSplitter;
+        private System.Windows.Forms.Button buttonSink;
+        private System.Windows.Forms.Label lblSelectedComponent;
+        private System.Windows.Forms.Label label8;
     }
 }
 
