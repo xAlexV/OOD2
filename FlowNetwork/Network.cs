@@ -9,11 +9,20 @@ namespace FlowNetwork
      public class Network
     {
         // List<Item> myItems();
+         private List<Item> items;
 
          //methods
-         public bool Remove ()
+         public bool Remove (int idnumber)
          {
-             return false;
+           for (int i=0; i<items.Count; i++)
+           {
+             if (items.elementAt(i).id == idnumber)
+             {
+              items.RemoveAt(i);  // use RemoveAt
+              return true;
+             }         
+           }
+           return false;
          }
 
          public void Save()
@@ -30,6 +39,7 @@ namespace FlowNetwork
 
          public void Reset()
          {
+             items.Clear();
 
          }
 
