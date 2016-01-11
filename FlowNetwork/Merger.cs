@@ -8,7 +8,7 @@ namespace FlowNetwork
 {
     public class Merger : Component
     { //fields
-       public Merger(int id,double x, double y, Pipe myPipe) : base (id, x, y , myPipe)
+       public Merger(int id,double x, double y) : base (id, x, y)
        {
 
         }

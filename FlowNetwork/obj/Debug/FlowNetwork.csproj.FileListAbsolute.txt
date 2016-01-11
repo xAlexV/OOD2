@@ -35,3 +35,6 @@ C:\GitHub\OOD2\FlowNetwork\obj\Debug\FlowNetwork.csprojResolveAssemblyReference.
 C:\GitHub\OOD2\FlowNetwork\obj\Debug\FlowNetwork.FormNetwork.resources
 C:\GitHub\OOD2\FlowNetwork\obj\Debug\FlowNetwork.Properties.Resources.resources
 C:\GitHub\OOD2\FlowNetwork\obj\Debug\FlowNetwork.csproj.GenerateResource.Cache
+\\vmware-host\Shared Folders\Desktop\GitHub\OOD2\FlowNetwork\bin\Debug\FlowNetwork.exe.config
+\\vmware-host\Shared Folders\Desktop\GitHub\OOD2\FlowNetwork\obj\Debug\FlowNetwork.exe
+\\vmware-host\Shared Folders\Desktop\GitHub\OOD2\FlowNetwork\obj\Debug\FlowNetwork.pdb

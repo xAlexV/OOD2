@@ -12,10 +12,13 @@ namespace FlowNetwork
 {
     public partial class FormNetwork : Form
     {
+        private Network nw = new Network();
         List<PictureBox> pictureBoxes = new List<PictureBox>();
         public FormNetwork()
         {
             InitializeComponent();
+           
+            
         }
         int x = 0;
         int y = 0;
@@ -23,7 +26,7 @@ namespace FlowNetwork
         bool clicked = false;
         Point mouseDown;
         int flag = 0;
-
+        
 
         private void AddPictureBox(string imagePath)
         {
@@ -119,6 +122,7 @@ namespace FlowNetwork
         {
             flag = 2;
             this.lblSelectedComponent.Text = "Sink";
+            
         }
 
         private void buttonSplitter_Click(object sender, EventArgs e)
@@ -131,6 +135,16 @@ namespace FlowNetwork
         {
             flag = 4;
             this.lblSelectedComponent.Text = "Merger";
+        }
+
+        private void btreset_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                nw.Reset();
+                this.panel2.Controls.Clear();
+            }
+            catch (NullReferenceException) { MessageBox.Show("The drawing board is already empty"); }
         }
     }
 }
