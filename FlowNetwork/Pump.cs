@@ -12,7 +12,7 @@ namespace FlowNetwork
         public int maxFlow;
         public int currFlow;
 
-       public Pump(int id,double x, double y, Pipe myPipe) : base (id, x, y , myPipe)
+       public Pump(int id,double x, double y) : base (id, x, y)
         {
 
         }

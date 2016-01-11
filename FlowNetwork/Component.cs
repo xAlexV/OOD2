@@ -10,14 +10,13 @@ namespace FlowNetwork
     {
         //fields
         public double x, y;
-        Pipe myPipe; 
+        
 
 
-        public Component (int id,double x, double y, Pipe myPipe) : base (id)
+        public Component (int id,double x, double y) : base (id)
         {    
             this.x = x;
             this.y = y;
-            this.myPipe = myPipe;
         }
 
     }
