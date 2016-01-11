@@ -183,49 +183,6 @@
             this.pictureBox5.TabIndex = 9;
             this.pictureBox5.TabStop = false;
             // 
-<<<<<<< HEAD
-=======
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::FlowNetwork.Properties.Resources.merger;
-            this.pictureBox4.InitialImage = global::FlowNetwork.Properties.Resources.merger;
-            this.pictureBox4.Location = new System.Drawing.Point(26, 256);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(64, 65);
-            this.pictureBox4.TabIndex = 8;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::FlowNetwork.Properties.Resources.splitter;
-            this.pictureBox3.InitialImage = global::FlowNetwork.Properties.Resources.splitter;
-            this.pictureBox3.Location = new System.Drawing.Point(26, 173);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(64, 66);
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::FlowNetwork.Properties.Resources.sink;
-            this.pictureBox2.Location = new System.Drawing.Point(26, 94);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.ErrorImage = global::FlowNetwork.Properties.Resources.pump2;
-            this.pictureBox1.Image = global::FlowNetwork.Properties.Resources.pump2;
-            this.pictureBox1.InitialImage = global::FlowNetwork.Properties.Resources.sink;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 65);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
->>>>>>> origin/master
             // label2
             // 
             this.label2.AutoSize = true;
@@ -303,7 +260,6 @@
             this.btreset.TabIndex = 3;
             this.btreset.Text = "RESET";
             this.btreset.UseVisualStyleBackColor = false;
-            this.btreset.Click += new System.EventHandler(this.btreset_Click);
             // 
             // btsave
             // 
@@ -359,11 +315,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(845, 548);
-=======
-            this.ClientSize = new System.Drawing.Size(845, 546);
->>>>>>> origin/master
             this.Controls.Add(this.btsaveas);
             this.Controls.Add(this.btload);
             this.Controls.Add(this.btsave);

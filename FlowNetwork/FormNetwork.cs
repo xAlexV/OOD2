@@ -12,16 +12,11 @@ namespace FlowNetwork
 {
     public partial class FormNetwork : Form
     {
-<<<<<<< HEAD
         List<PictureBox> pictureBoxes = new List<PictureBox>();
-=======
-        private Network nw;
->>>>>>> origin/master
         public FormNetwork()
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
         int x = 0;
         int y = 0;
         bool drag = false;
@@ -136,13 +131,6 @@ namespace FlowNetwork
         {
             flag = 4;
             this.lblSelectedComponent.Text = "Merger";
-=======
-
-        private void btreset_Click(object sender, EventArgs e)
-        {
-            nw.Reset();
-            this.panel2.Controls.Clear();
->>>>>>> origin/master
         }
     }
 }

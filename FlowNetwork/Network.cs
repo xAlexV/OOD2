@@ -3,27 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 
 namespace FlowNetwork
 {
      public class Network
     {
         // List<Item> myItems();
-         private List<Item> items;
 
          //methods
-         public bool Remove (int idnumber)
+         public bool Remove ()
          {
-           for (int i=0; i<items.Count; i++)
-           {
-             //if (items.elementAt(i).id == idnumber)
-             //{
-              //items.RemoveAt(i);  // use RemoveAt
-              return true;
-             //}         
-           }
-           return false;
+             return false;
          }
 
          public void Save()
@@ -32,26 +22,14 @@ namespace FlowNetwork
          }
 
 
-         public void Load(String filename)
+         public bool Load()
          { 
              //do stuff
-             this.items.Clear();
-             StreamReader sr = null;
-             try
-             {
-                 sr = new StreamReader(new FileStream(filename, FileMode.Open, FileAccess.Read));
-                 String s;
-             }
-             finally
-             {
-             }
-
+             return false;
          }
 
          public void Reset()
          {
-             items.Clear();
-
 
          }
 
