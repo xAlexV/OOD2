@@ -50,6 +50,8 @@
             this.btsave = new System.Windows.Forms.Button();
             this.btload = new System.Windows.Forms.Button();
             this.btsaveas = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblSelectedComponent = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +59,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel1.Controls.Add(this.lblSelectedComponent);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.buttonMerger);
             this.panel1.Controls.Add(this.buttonSplitter);
             this.panel1.Controls.Add(this.buttonSink);
@@ -81,7 +85,7 @@
             // 
             this.buttonMerger.BackgroundImage = global::FlowNetwork.Properties.Resources.merger;
             this.buttonMerger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonMerger.Location = new System.Drawing.Point(26, 255);
+            this.buttonMerger.Location = new System.Drawing.Point(26, 266);
             this.buttonMerger.Name = "buttonMerger";
             this.buttonMerger.Size = new System.Drawing.Size(64, 65);
             this.buttonMerger.TabIndex = 18;
@@ -92,7 +96,7 @@
             // 
             this.buttonSplitter.BackgroundImage = global::FlowNetwork.Properties.Resources.splitter;
             this.buttonSplitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonSplitter.Location = new System.Drawing.Point(26, 171);
+            this.buttonSplitter.Location = new System.Drawing.Point(26, 195);
             this.buttonSplitter.Name = "buttonSplitter";
             this.buttonSplitter.Size = new System.Drawing.Size(64, 65);
             this.buttonSplitter.TabIndex = 17;
@@ -103,7 +107,7 @@
             // 
             this.buttonSink.BackgroundImage = global::FlowNetwork.Properties.Resources.sink;
             this.buttonSink.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonSink.Location = new System.Drawing.Point(26, 94);
+            this.buttonSink.Location = new System.Drawing.Point(26, 124);
             this.buttonSink.Name = "buttonSink";
             this.buttonSink.Size = new System.Drawing.Size(64, 65);
             this.buttonSink.TabIndex = 16;
@@ -114,7 +118,7 @@
             // 
             this.button1.BackgroundImage = global::FlowNetwork.Properties.Resources.pump2;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(26, 23);
+            this.button1.Location = new System.Drawing.Point(26, 53);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(64, 65);
             this.button1.TabIndex = 15;
@@ -135,7 +139,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(112, 279);
+            this.label6.Location = new System.Drawing.Point(112, 300);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 17);
             this.label6.TabIndex = 13;
@@ -145,7 +149,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(112, 195);
+            this.label5.Location = new System.Drawing.Point(112, 219);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 17);
             this.label5.TabIndex = 12;
@@ -155,7 +159,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(112, 114);
+            this.label4.Location = new System.Drawing.Point(112, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 17);
             this.label4.TabIndex = 11;
@@ -165,7 +169,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(112, 40);
+            this.label3.Location = new System.Drawing.Point(112, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 17);
             this.label3.TabIndex = 10;
@@ -290,6 +294,23 @@
             this.btsaveas.Text = "SAVE AS";
             this.btsaveas.UseVisualStyleBackColor = false;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "You have selected a:";
+            // 
+            // lblSelectedComponent
+            // 
+            this.lblSelectedComponent.AutoSize = true;
+            this.lblSelectedComponent.Location = new System.Drawing.Point(118, 7);
+            this.lblSelectedComponent.Name = "lblSelectedComponent";
+            this.lblSelectedComponent.Size = new System.Drawing.Size(0, 13);
+            this.lblSelectedComponent.TabIndex = 20;
+            // 
             // FormNetwork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,6 +356,8 @@
         private System.Windows.Forms.Button buttonMerger;
         private System.Windows.Forms.Button buttonSplitter;
         private System.Windows.Forms.Button buttonSink;
+        private System.Windows.Forms.Label lblSelectedComponent;
+        private System.Windows.Forms.Label label8;
     }
 }
 

@@ -85,6 +85,7 @@ namespace FlowNetwork
         {
             //AddPictureBox(@"../../../images/pump.png");
             flag = 1;
+            this.lblSelectedComponent.Text = "Pump";
            
         }
 
@@ -92,20 +93,24 @@ namespace FlowNetwork
         {
             x = e.X;
             y = e.Y;
-            mouseDown = new Point(x, y);
+            mouseDown = new Point(x - 20, y - 20);
             switch(flag)
             { 
                 case 1:
                 AddPictureBox(@"../../../images/pump.png");
+                this.lblSelectedComponent.Text = "";
                 break;
                 case 2:
                 AddPictureBox(@"../../../images/sink.png");
+                this.lblSelectedComponent.Text = "";
                 break;
                 case 3:
                 AddPictureBox(@"../../../images/splitter.png");
+                this.lblSelectedComponent.Text = "";
                 break;
                 case 4:
                 AddPictureBox(@"../../../images/merger.png");
+                this.lblSelectedComponent.Text = "";
                 break;
         }
         }
@@ -113,16 +118,19 @@ namespace FlowNetwork
         private void buttonSink_Click(object sender, EventArgs e)
         {
             flag = 2;
+            this.lblSelectedComponent.Text = "Sink";
         }
 
         private void buttonSplitter_Click(object sender, EventArgs e)
         {
             flag = 3;
+            this.lblSelectedComponent.Text = "Splitter";
         }
 
         private void buttonMerger_Click(object sender, EventArgs e)
         {
             flag = 4;
+            this.lblSelectedComponent.Text = "Merger";
         }
     }
 }
