@@ -12,7 +12,6 @@ namespace FlowNetwork
          //fields
          public int id;
          Point myPoint;
-
          
 
          //constructor
