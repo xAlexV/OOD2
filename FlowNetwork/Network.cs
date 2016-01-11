@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace FlowNetwork
 {
@@ -16,11 +17,11 @@ namespace FlowNetwork
          {
            for (int i=0; i<items.Count; i++)
            {
-             if (items.elementAt(i).id == idnumber)
-             {
-              items.RemoveAt(i);  // use RemoveAt
+             //if (items.elementAt(i).id == idnumber)
+             //{
+              //items.RemoveAt(i);  // use RemoveAt
               return true;
-             }         
+             //}         
            }
            return false;
          }
@@ -31,15 +32,26 @@ namespace FlowNetwork
          }
 
 
-         public bool Load()
+         public void Load(String filename)
          { 
              //do stuff
-             return false;
+             this.items.Clear();
+             StreamReader sr = null;
+             try
+             {
+                 sr = new StreamReader(new FileStream(filename, FileMode.Open, FileAccess.Read));
+                 String s;
+             }
+             finally
+             {
+             }
+
          }
 
          public void Reset()
          {
              items.Clear();
+
 
          }
 
