@@ -131,6 +131,7 @@ namespace FlowNetwork
         {
             flag = 4;
             this.lblSelectedComponent.Text = "Merger";
+            int temp = 0;
         }
     }
 }
