@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblSelectedComponent = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.buttonMerger = new System.Windows.Forms.Button();
             this.buttonSplitter = new System.Windows.Forms.Button();
             this.buttonSink = new System.Windows.Forms.Button();
@@ -50,8 +52,6 @@
             this.btsave = new System.Windows.Forms.Button();
             this.btload = new System.Windows.Forms.Button();
             this.btsaveas = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblSelectedComponent = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
@@ -80,6 +80,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(209, 524);
             this.panel1.TabIndex = 0;
+            // 
+            // lblSelectedComponent
+            // 
+            this.lblSelectedComponent.AutoSize = true;
+            this.lblSelectedComponent.Location = new System.Drawing.Point(133, 4);
+            this.lblSelectedComponent.Name = "lblSelectedComponent";
+            this.lblSelectedComponent.Size = new System.Drawing.Size(0, 13);
+            this.lblSelectedComponent.TabIndex = 20;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(26, 4);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "You have selected a:";
             // 
             // buttonMerger
             // 
@@ -260,6 +277,7 @@
             this.btreset.TabIndex = 3;
             this.btreset.Text = "RESET";
             this.btreset.UseVisualStyleBackColor = false;
+            this.btreset.Click += new System.EventHandler(this.btreset_Click);
             // 
             // btsave
             // 
@@ -293,23 +311,6 @@
             this.btsaveas.TabIndex = 6;
             this.btsaveas.Text = "SAVE AS";
             this.btsaveas.UseVisualStyleBackColor = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(26, 4);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 13);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "You have selected a:";
-            // 
-            // lblSelectedComponent
-            // 
-            this.lblSelectedComponent.AutoSize = true;
-            this.lblSelectedComponent.Location = new System.Drawing.Point(133, 4);
-            this.lblSelectedComponent.Name = "lblSelectedComponent";
-            this.lblSelectedComponent.Size = new System.Drawing.Size(0, 13);
-            this.lblSelectedComponent.TabIndex = 20;
             // 
             // FormNetwork
             // 
