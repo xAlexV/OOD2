@@ -13,6 +13,7 @@ namespace FlowNetwork
     public partial class FormNetwork : Form
     {
         List<PictureBox> pictureBoxes = new List<PictureBox>();
+        List<Item> myItems = new List<Item>();
         public FormNetwork()
         {
             InitializeComponent();
@@ -20,10 +21,9 @@ namespace FlowNetwork
         int x = 0;
         int y = 0;
         bool drag = false;
-        bool clicked = false;
         Point mouseDown;
         int flag = 0;
-
+        ContextMenuStrip contextMenuStrip1 = new ContextMenuStrip();
 
         private void AddPictureBox(string imagePath)
         {
@@ -94,25 +94,29 @@ namespace FlowNetwork
             x = e.X;
             y = e.Y;
             mouseDown = new Point(x - 20, y - 20);
-            switch(flag)
-            { 
+            switch (flag)
+            {
                 case 1:
-                AddPictureBox(@"../../../images/pump.png");
-                this.lblSelectedComponent.Text = "";
-                break;
+                    AddPictureBox(@"../../../images/pump.png");
+                    this.lblSelectedComponent.Text = "";
+                    myItems.Add(new Pump(myItems.Count(), x - 20, y - 20));
+                    break;
                 case 2:
-                AddPictureBox(@"../../../images/sink.png");
-                this.lblSelectedComponent.Text = "";
-                break;
+                    AddPictureBox(@"../../../images/sink.png");
+                    this.lblSelectedComponent.Text = "";
+                    myItems.Add(new Sink(myItems.Count(), x - 20, y - 20));
+                    break;
                 case 3:
-                AddPictureBox(@"../../../images/splitter.png");
-                this.lblSelectedComponent.Text = "";
-                break;
+                    AddPictureBox(@"../../../images/splitter.png");
+                    this.lblSelectedComponent.Text = "";
+                    myItems.Add(new Spliter(myItems.Count(), x - 20, y - 20));
+                    break;
                 case 4:
-                AddPictureBox(@"../../../images/merger.png");
-                this.lblSelectedComponent.Text = "";
-                break;
-        }
+                    AddPictureBox(@"../../../images/merger.png");
+                    this.lblSelectedComponent.Text = "";
+                    myItems.Add(new Merger(myItems.Count(), x - 20, y - 20));
+                    break;
+            }
         }
 
         private void buttonSink_Click(object sender, EventArgs e)
@@ -123,10 +127,33 @@ namespace FlowNetwork
 
         private void buttonSplitter_Click(object sender, EventArgs e)
         {
-            flag = 3;
-            this.lblSelectedComponent.Text = "Splitter";
+          //  flag = 3;
+            //this.lblSelectedComponent.Text = "Splitter";
+
+            contextMenuStrip1.Items.Clear();
+            contextMenuStrip1.Items.Add("Normal Splitter");
+            contextMenuStrip1.Items.Add("Adjustable Splitter");
+
+            contextMenuStrip1.Show(buttonSplitter, new Point(0, buttonSplitter.Height));
+
         }
 
+        private void contextMenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+          
+                if (e.ClickedItem.Text == "Normal Splitter")
+                {
+                    MessageBox.Show(e.ClickedItem.Text);
+                    flag = 3;
+                    this.lblSelectedComponent.Text = e.ClickedItem.Text;
+                }
+                else if (e.ClickedItem.Text == "Adjustable Splitter")
+                {
+                    flag = 3;
+                    this.lblSelectedComponent.Text = "Adjustable Splitter";
+                }
+            
+        }
         private void buttonMerger_Click(object sender, EventArgs e)
         {
             flag = 4;

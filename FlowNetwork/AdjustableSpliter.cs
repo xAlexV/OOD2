@@ -8,8 +8,8 @@ namespace FlowNetwork
 {
     public class AdjustableSpliter : Spliter
     {
-        public AdjustableSpliter(int id, double x, double y, Pipe myPipe)
-            : base(id, x, y, myPipe)
+        public AdjustableSpliter(int id, double x, double y)
+            : base(id, x, y)
         {
 
         }

@@ -11,7 +11,7 @@ namespace FlowNetwork
         //fields 
         public int currFlow;
 
-       public Sink(int id,double x, double y, Pipe myPipe) : base (id, x, y , myPipe)
+       public Sink(int id,double x, double y) : base (id, x, y )
         {
 
         }

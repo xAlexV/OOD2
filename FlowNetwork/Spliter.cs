@@ -9,7 +9,7 @@ namespace FlowNetwork
     public class Spliter : Component
     {
         //fields
-       public Spliter(int id,double x, double y, Pipe myPipe) : base (id, x, y , myPipe)
+       public Spliter(int id,double x, double y) : base (id, x, y)
        {
 
         }
