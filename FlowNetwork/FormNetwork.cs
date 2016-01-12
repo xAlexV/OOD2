@@ -26,11 +26,8 @@ namespace FlowNetwork
         bool drag = false;
         Point mouseDown;
         int flag = 0;
-<<<<<<< HEAD
-        
-=======
+
         ContextMenuStrip contextMenuStrip1 = new ContextMenuStrip();
->>>>>>> 591ca72cd1ecd43c1c0fe2ceb71b9bb2d13424bc
 
         private void AddPictureBox(string imagePath)
         {
