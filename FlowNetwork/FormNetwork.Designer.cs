@@ -78,7 +78,7 @@
             this.panel1.Controls.Add(this.btsubmit);
             this.panel1.Location = new System.Drawing.Point(25, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(209, 524);
+            this.panel1.Size = new System.Drawing.Size(248, 524);
             this.panel1.TabIndex = 0;
             // 
             // lblSelectedComponent
@@ -249,9 +249,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.panel2.Location = new System.Drawing.Point(251, 12);
+            this.panel2.Location = new System.Drawing.Point(295, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(560, 431);
+            this.panel2.Size = new System.Drawing.Size(645, 524);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
@@ -260,7 +260,7 @@
             // 
             this.btremove.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btremove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btremove.Location = new System.Drawing.Point(251, 462);
+            this.btremove.Location = new System.Drawing.Point(295, 546);
             this.btremove.Name = "btremove";
             this.btremove.Size = new System.Drawing.Size(125, 72);
             this.btremove.TabIndex = 2;
@@ -271,7 +271,7 @@
             // 
             this.btreset.BackColor = System.Drawing.Color.LightGreen;
             this.btreset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btreset.Location = new System.Drawing.Point(394, 462);
+            this.btreset.Location = new System.Drawing.Point(465, 545);
             this.btreset.Name = "btreset";
             this.btreset.Size = new System.Drawing.Size(125, 73);
             this.btreset.TabIndex = 3;
@@ -283,7 +283,7 @@
             // 
             this.btsave.BackColor = System.Drawing.Color.LightGreen;
             this.btsave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btsave.Location = new System.Drawing.Point(538, 462);
+            this.btsave.Location = new System.Drawing.Point(626, 546);
             this.btsave.Name = "btsave";
             this.btsave.Size = new System.Drawing.Size(125, 33);
             this.btsave.TabIndex = 4;
@@ -294,7 +294,7 @@
             // 
             this.btload.BackColor = System.Drawing.Color.LightGreen;
             this.btload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btload.Location = new System.Drawing.Point(686, 462);
+            this.btload.Location = new System.Drawing.Point(815, 546);
             this.btload.Name = "btload";
             this.btload.Size = new System.Drawing.Size(125, 72);
             this.btload.TabIndex = 5;
@@ -305,7 +305,7 @@
             // 
             this.btsaveas.BackColor = System.Drawing.Color.LightGreen;
             this.btsaveas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btsaveas.Location = new System.Drawing.Point(538, 500);
+            this.btsaveas.Location = new System.Drawing.Point(626, 585);
             this.btsaveas.Name = "btsaveas";
             this.btsaveas.Size = new System.Drawing.Size(125, 34);
             this.btsaveas.TabIndex = 6;
@@ -316,7 +316,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 548);
+            this.ClientSize = new System.Drawing.Size(988, 650);
             this.Controls.Add(this.btsaveas);
             this.Controls.Add(this.btload);
             this.Controls.Add(this.btsave);
@@ -326,6 +326,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormNetwork";
             this.Text = "Form1";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormNetwork_Paint);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

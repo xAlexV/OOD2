@@ -15,28 +15,34 @@ namespace FlowNetwork
         private Network nw = new Network();
         List<PictureBox> pictureBoxes = new List<PictureBox>();
         List<Item> myItems = new List<Item>();
+        int x = 0;
+        int y = 0;
+        int flag = 0;
+        bool drag = false;
+        Point mouseDown;
+        ContextMenuStrip selectedSplitter = new ContextMenuStrip();
+        ButtonEnumeration aboutPump = ButtonEnumeration.AboutPump;
+        ButtonEnumeration aboutSink = ButtonEnumeration.AboutSink;
+        ButtonEnumeration aboutSplitter = ButtonEnumeration.AboutSplitter;
+        ButtonEnumeration aboutMerger = ButtonEnumeration.AboutMerger;
+
         public FormNetwork()
         {
             InitializeComponent();
-           
-            
+            this.tbcapacity.Enabled = false;
+            this.tbflow.Enabled = false;
+            selectedSplitter.Items.Add("Normal Splitter");
+            selectedSplitter.Items.Add("Adjustable Splitter");     
         }
-        int x = 0;
-        int y = 0;
-        bool drag = false;
-        Point mouseDown;
-        int flag = 0;
-
-        ContextMenuStrip contextMenuStrip1 = new ContextMenuStrip();
 
         private void AddPictureBox(string imagePath)
         {
-            if (flag !=0)
+            if (flag!= 0)
             {
                 var pb = new PictureBox();
                 pb.Name = "picturebox" + pictureBoxes.Count;
                 pb.Location = mouseDown;
-                pb.Size = new Size(40, 40);
+                pb.Size = new Size(60, 60);
                 pb.BorderStyle = BorderStyle.None;
                 pb.SizeMode = PictureBoxSizeMode.StretchImage;
                 panel2.Controls.Add(pb);
@@ -82,15 +88,16 @@ namespace FlowNetwork
        
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-          
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //AddPictureBox(@"../../../images/pump.png");
             flag = 1;
+            this.tbcapacity.Enabled = true;
+            this.tbflow.Enabled = true;
             this.lblSelectedComponent.Text = "Pump";
-           
+      
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
@@ -103,22 +110,24 @@ namespace FlowNetwork
                 case 1:
                     AddPictureBox(@"../../../images/pump.png");
                     this.lblSelectedComponent.Text = "";
-                    myItems.Add(new Pump(myItems.Count(), x - 20, y - 20));
+                    myItems.Add(new Pump(myItems.Count(), x - 30, y - 30));
+                    this.tbcapacity.Enabled = false;
+                    this.tbflow.Enabled = false;
                     break;
                 case 2:
                     AddPictureBox(@"../../../images/sink.png");
                     this.lblSelectedComponent.Text = "";
-                    myItems.Add(new Sink(myItems.Count(), x - 20, y - 20));
+                    myItems.Add(new Sink(myItems.Count(), x - 30, y - 30));
                     break;
                 case 3:
                     AddPictureBox(@"../../../images/splitter.png");
                     this.lblSelectedComponent.Text = "";
-                    myItems.Add(new Spliter(myItems.Count(), x - 20, y - 20));
+                    myItems.Add(new Spliter(myItems.Count(), x - 30, y - 30));
                     break;
                 case 4:
                     AddPictureBox(@"../../../images/merger.png");
                     this.lblSelectedComponent.Text = "";
-                    myItems.Add(new Merger(myItems.Count(), x - 20, y - 20));
+                    myItems.Add(new Merger(myItems.Count(), x - 30, y - 30));
                     break;
             }
         }
@@ -135,29 +144,24 @@ namespace FlowNetwork
           //  flag = 3;
             //this.lblSelectedComponent.Text = "Splitter";
 
-            contextMenuStrip1.Items.Clear();
-            contextMenuStrip1.Items.Add("Normal Splitter");
-            contextMenuStrip1.Items.Add("Adjustable Splitter");
-
-            contextMenuStrip1.Show(buttonSplitter, new Point(0, buttonSplitter.Height));
-
+            selectedSplitter.Show(buttonSplitter, new Point(0, buttonSplitter.Height));
+            selectedSplitter.ItemClicked += new ToolStripItemClickedEventHandler(selectedSplitter_ItemClicked);
         }
 
-        private void contextMenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void selectedSplitter_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-          
-                if (e.ClickedItem.Text == "Normal Splitter")
-                {
-                    MessageBox.Show(e.ClickedItem.Text);
-                    flag = 3;
-                    this.lblSelectedComponent.Text = e.ClickedItem.Text;
-                }
-                else if (e.ClickedItem.Text == "Adjustable Splitter")
-                {
-                    flag = 3;
-                    this.lblSelectedComponent.Text = "Adjustable Splitter";
-                }
-            
+            ToolStripItem item = e.ClickedItem;
+
+            if (item.Text == "Normal Splitter")
+            {
+                flag = 3;
+                this.lblSelectedComponent.Text = e.ClickedItem.Text;
+            }
+            else if (item.Text == "Adjustable Splitter")
+            {
+                flag = 3;
+                this.lblSelectedComponent.Text = "Adjustable Splitter";
+            }
         }
         private void buttonMerger_Click(object sender, EventArgs e)
         {
@@ -173,6 +177,11 @@ namespace FlowNetwork
                 this.panel2.Controls.Clear();
             }
             catch (NullReferenceException) { MessageBox.Show("The drawing board is already empty"); }
+        }
+
+        private void FormNetwork_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }
