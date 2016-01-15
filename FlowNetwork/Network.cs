@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Drawing;
 
 namespace FlowNetwork
 {
@@ -61,7 +62,6 @@ namespace FlowNetwork
          {
              Item p = new Item(id);
              items.Add(p);
-
          }
 
     }

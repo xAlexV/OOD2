@@ -44,3 +44,9 @@ C:\GitHub\OOD2\FlowNetwork\obj\Debug\FlowNetwork.csproj.GenerateResource.Cache
 \\vmware-host\Shared Folders\Desktop\GitHub\OOD2\FlowNetwork\obj\Debug\FlowNetwork.csproj.GenerateResource.Cache
 \\vmware-host\Shared Folders\Desktop\GitHub\OOD2\FlowNetwork\bin\Debug\FlowNetwork.exe
 \\vmware-host\Shared Folders\Desktop\GitHub\OOD2\FlowNetwork\bin\Debug\FlowNetwork.pdb
+C:\Users\Dmytro Bunin\Documents\GitHub\OOD2\FlowNetwork\obj\Debug\FlowNetwork.csprojResolveAssemblyReference.cache
+C:\Users\Dmytro Bunin\Documents\GitHub\OOD2\FlowNetwork\obj\Debug\FlowNetwork.FormNetwork.resources
+C:\Users\Dmytro Bunin\Documents\GitHub\OOD2\FlowNetwork\obj\Debug\FlowNetwork.Properties.Resources.resources
+C:\Users\Dmytro Bunin\Documents\GitHub\OOD2\FlowNetwork\obj\Debug\FlowNetwork.csproj.GenerateResource.Cache
+C:\Users\Dmytro Bunin\Documents\GitHub\OOD2\FlowNetwork\bin\Debug\FlowNetwork.exe
+C:\Users\Dmytro Bunin\Documents\GitHub\OOD2\FlowNetwork\bin\Debug\FlowNetwork.pdb

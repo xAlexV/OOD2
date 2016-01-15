@@ -19,6 +19,10 @@ namespace FlowNetwork
              this.id = id;
          }
 
+         public int ID()
+         {
+             return id;
+         }
 
     }
 }

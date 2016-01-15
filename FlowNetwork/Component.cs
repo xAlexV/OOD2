@@ -19,5 +19,9 @@ namespace FlowNetwork
             this.y = y;
         }
 
+        public System.Drawing.Point GivePoint()
+        {
+            return new System.Drawing.Point(Convert.ToInt32(x), Convert.ToInt32(y));
+        }
     }
 }

@@ -15,11 +15,12 @@ namespace FlowNetwork
         private Network nw = new Network();
         List<PictureBox> pictureBoxes = new List<PictureBox>();
         List<Item> myItems = new List<Item>();
+        List<Point> PointList = new List<Point>();
         int x = 0;
         int y = 0;
         int flag = 0;
         bool drag = false;
-        Point mouseDown;
+        Point mouseDown, mouseDownPictureBox;
         ContextMenuStrip selectedSplitter = new ContextMenuStrip();
         ButtonEnumeration aboutPump = ButtonEnumeration.AboutPump;
         ButtonEnumeration aboutSink = ButtonEnumeration.AboutSink;
@@ -66,7 +67,15 @@ namespace FlowNetwork
             // Get original position of cursor on mousedown
             x = e.X;
             y = e.Y;
-            drag = true;
+            if(flag == 5)
+            {
+                mouseDownPictureBox = new Point(x, y);
+                PointList.Add(mouseDownPictureBox);
+            }
+            else
+            { 
+                drag = true;
+            }
         }
 
         private void picMouseMove(object sender, MouseEventArgs e)
@@ -129,6 +138,27 @@ namespace FlowNetwork
                     this.lblSelectedComponent.Text = "";
                     myItems.Add(new Merger(myItems.Count(), x - 30, y - 30));
                     break;
+                case 5:
+                    bool check = false;
+                    foreach (Item i in myItems)
+                    {
+                        if (Math.Abs(((Component)i).GivePoint().X - mouseDownPictureBox.X) <= 30 && Math.Abs(((Component)i).GivePoint().Y - mouseDownPictureBox.Y) <= 30)
+                            if(i is Pump || i is Spliter || i is AdjustableSpliter)
+                            {
+                                PointList.Add(new Point(e.X, e.Y));
+                                Graphics g = panel1.CreateGraphics();
+
+                                g.DrawLines(new Pen(Color.Black, 3), PointList.ToArray());
+                                check = true;
+                            }
+                    }
+                    if (!check)
+                    {
+                        PointList = new List<Point>();
+                        MessageBox.Show("You cannot start a pipe from SINK");
+                    }
+                    flag = 0;
+                    break;
             }
         }
 
@@ -182,6 +212,16 @@ namespace FlowNetwork
         private void FormNetwork_Paint(object sender, PaintEventArgs e)
         {
             
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_add_pipe_Click(object sender, EventArgs e)
+        {
+            flag = 5;
         }
     }
 }
