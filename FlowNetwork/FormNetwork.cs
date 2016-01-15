@@ -12,6 +12,7 @@ namespace FlowNetwork
 {
     public partial class FormNetwork : Form
     {
+       
         private Network nw = new Network();
         List<PictureBox> pictureBoxes = new List<PictureBox>();
         List<Item> myItems = new List<Item>();
@@ -191,6 +192,13 @@ namespace FlowNetwork
             {
                 flag = 3;
                 this.lblSelectedComponent.Text = "Adjustable Splitter";
+                TrackBar trackform = new TrackBar();
+                trackform.Show();
+                label1.Text = trackform.trackflow.ToString();
+
+                
+
+
             }
         }
         private void buttonMerger_Click(object sender, EventArgs e)
@@ -223,5 +231,9 @@ namespace FlowNetwork
         {
             flag = 5;
         }
+
+
+        
     }
+
 }

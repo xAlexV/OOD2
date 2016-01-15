@@ -50,3 +50,4 @@ C:\Users\Dmytro Bunin\Documents\GitHub\OOD2\FlowNetwork\obj\Debug\FlowNetwork.Pr
 C:\Users\Dmytro Bunin\Documents\GitHub\OOD2\FlowNetwork\obj\Debug\FlowNetwork.csproj.GenerateResource.Cache
 C:\Users\Dmytro Bunin\Documents\GitHub\OOD2\FlowNetwork\bin\Debug\FlowNetwork.exe
 C:\Users\Dmytro Bunin\Documents\GitHub\OOD2\FlowNetwork\bin\Debug\FlowNetwork.pdb
+C:\Users\Mikhail\Documents\GitHub\OOD2\FlowNetwork\obj\Debug\FlowNetwork.TrackBar.resources
