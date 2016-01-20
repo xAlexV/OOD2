@@ -193,8 +193,9 @@ namespace FlowNetwork
                 flag = 3;
                 this.lblSelectedComponent.Text = "Adjustable Splitter";
                 TrackBar trackform = new TrackBar();
-                trackform.Show();
-                label1.Text = trackform.trackflow.ToString();
+                trackform.ShowDialog();
+                int myflow = trackform.MyFlow;
+                label1.Text = myflow.ToString();
 
                 
 

@@ -19,13 +19,24 @@ namespace FlowNetwork
             InitializeComponent();
         }
 
+        public int MyFlow
+        {
+            get { return trackflow; }
+        }
+
         private void btconfirm_Click(object sender, EventArgs e)
         {
-            trackflow = trackBar1.Value;
             this.Close();
-
            
         }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            label1.Text = trackBar1.Value.ToString();
+            trackflow = trackBar1.Value;
+        }
+
+        
 
 
     }
