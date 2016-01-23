@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 
 namespace FlowNetwork
-{
+{ [Serializable]
      public class Item
     {
          //fields

@@ -5,12 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Drawing;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace FlowNetwork
 {
-     public class Network
+    [Serializable]
+     public class Network : ISerializable
     {
         private List<Item> items;
+
+
 
         public void SavePipe(int maxFlow, int currentFlow, int id1, int id2, List<Point> pointList)
         {
@@ -21,6 +26,12 @@ namespace FlowNetwork
         {
             items = new List<Item>();
         }
+
+        public Network(SerializationInfo information, StreamingContext scontext)
+        {
+            items = (List<Item>)information.GetValue("items", typeof(List<Item>));
+        }
+
 
          //methods
         public bool Remove(int idnumber)
@@ -36,26 +47,34 @@ namespace FlowNetwork
             return false;
         }
 
-         public void Save()
+         public static void Save(Network network, String path)
          { 
              //include save as as a condition
+             using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
+             {
+                 BinaryFormatter binForm = new BinaryFormatter();
+                 binForm.Serialize(fs, network); 
+             }
          }
 
 
-         public void Load(String filename)
+         public static Network Load(String path)
          {
              //do stuff
-             this.items.Clear();
-             StreamReader sr = null;
-             try
+             using (FileStream fs = new FileStream(path, FileMode.Open))
              {
-                 sr = new StreamReader(new FileStream(filename, FileMode.Open, FileAccess.Read));
-                 String s;
-             }
-             finally
-             {
+                 using (BinaryReader binReader = new BinaryReader(fs))
+                 {
+                     BinaryFormatter binForm = new BinaryFormatter();
+                     return (Network)binForm.Deserialize(fs);
+                 }
              }
 
+         }
+
+         public void GetObjectData(SerializationInfo information, StreamingContext scontext)
+         {
+             information.AddValue("items", items);
          }
 
          public void Reset()

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace FlowNetwork
 {
+    [Serializable]
     public class Merger : Component
     { //fields
        public Merger(int id,double x, double y) : base (id, x, y)

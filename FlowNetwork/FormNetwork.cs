@@ -20,6 +20,7 @@ namespace FlowNetwork
         int y = 0;
         int flag = 0;
         bool drag = false;
+        string path = "";
         Point mouseDown, mouseDownPictureBox;
         ContextMenuStrip selectedSplitter = new ContextMenuStrip();
         ButtonEnumeration aboutPump = ButtonEnumeration.AboutPump;
@@ -307,6 +308,49 @@ namespace FlowNetwork
         private void DrawPipe()
         {
 
+        }
+
+        private void btload_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Do you want to save your network before loading?", "Save?", MessageBoxButtons.YesNo);
+
+            if (dialog == DialogResult.Yes)
+            {
+                btsaveas.PerformClick();
+                OpenFileDialog loadDialog = new OpenFileDialog();
+                if (loadDialog.ShowDialog() == DialogResult.OK)
+                {
+                    loadDialog.Title = "Load Network from a file";
+                    path = loadDialog.FileName;
+                    nw = Network.Load(loadDialog.FileName);
+
+
+                }
+            }
+            else if (dialog == DialogResult.No)
+            {
+                OpenFileDialog loadDialog = new OpenFileDialog();
+                if (loadDialog.ShowDialog() == DialogResult.OK)
+                {
+                    loadDialog.Title = "Load Network from a file";
+                    path = loadDialog.FileName;
+                    nw = Network.Load(loadDialog.FileName);
+                    
+                }
+            }
+        }
+
+        private void btsaveas_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Title = "Save Network";
+            dialog.DefaultExt = ".XML";
+            if (dialog.ShowDialog() == DialogResult.OK && dialog.FileName != null)
+            {
+                Network.Save(nw, dialog.FileName);
+                path = dialog.FileName;
+
+            }
         }
 
         

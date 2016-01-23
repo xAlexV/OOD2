@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace FlowNetwork
 {
+    [Serializable]
    public class Sink : Component
     {
         //fields 

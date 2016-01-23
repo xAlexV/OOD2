@@ -7,6 +7,7 @@ using System.Drawing;
 
 namespace FlowNetwork
 {
+    [Serializable]
     public class Pipe : Item
     {
         //fields 
