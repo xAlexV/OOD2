@@ -12,10 +12,9 @@ namespace FlowNetwork
 {
     public partial class FormNetwork : Form
     {
-       
+        Component temp;
         private Network nw = new Network();
         List<PictureBox> pictureBoxes = new List<PictureBox>();
-        List<Item> myItems = new List<Item>();
         List<Point> PointList = new List<Point>();
         int x = 0;
         int y = 0;
@@ -68,10 +67,92 @@ namespace FlowNetwork
             // Get original position of cursor on mousedown
             x = e.X;
             y = e.Y;
+            PictureBox pb = (PictureBox)sender;
             if(flag == 5)
             {
-                mouseDownPictureBox = new Point(x, y);
-                PointList.Add(mouseDownPictureBox);
+                if (PointList.Count() == 0)
+                {
+                    foreach (Item i in nw.GiveList())
+                    {
+                        if (i is Component)
+                        {
+                            int x1 = ((Component)i).GivePoint().X - pb.Location.X;
+                            int x2 = ((Component)i).GivePoint().Y - pb.Location.Y;
+                            if (Math.Abs(((Component)i).GivePoint().X - pb.Location.X) <= 20 && Math.Abs(((Component)i).GivePoint().Y - pb.Location.Y) <= 20)
+                            {
+                                if (i is Pump || i is Merger || i is Spliter || i is AdjustableSpliter)
+                                {
+                                    if (nw.FindConnection(i.ID()))
+                                    {
+                                        mouseDownPictureBox = new Point(pb.Location.X + 40, pb.Location.Y + 20);
+                                        PointList.Add(mouseDownPictureBox);
+                                        temp = (Component)i;
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Component already has pipe connected");
+                                        flag = 0;
+                                        PointList = new List<Point>();
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Pipe can't start from Sink");
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (Component i in nw.GiveList())
+                    {
+                        if (Math.Abs(i.GivePoint().X - pb.Location.X) <= 20 && Math.Abs(i.GivePoint().Y - pb.Location.Y) <= 20)
+                        {
+                            if (i is Sink || i is Merger || i is Spliter || i is AdjustableSpliter)
+                            {
+                                if (nw.FindEndConnection(i.ID()))
+                                {
+                                    mouseDownPictureBox = new Point(pb.Location.X, pb.Location.Y + 20);
+                                    Pen pen = new Pen(Color.Black, 3);
+                                    PointList.Add(mouseDownPictureBox);
+                                    try
+                                    {
+                                        nw.SavePipe(Convert.ToInt32(this.tbcapacity.Text), 1, temp.ID(), i.ID(), PointList);
+
+                                        Graphics g = panel2.CreateGraphics();
+
+                                        g.DrawLines(pen, PointList.ToArray());
+                                        Invalidate();
+                                    }
+                                    catch (Exception)
+                                    {
+                                        MessageBox.Show("You need to feel in Capacity.");
+                                        flag = 0;
+                                        PointList = new List<Point>();
+                                    }
+
+                                    flag = 0;
+                                    PointList = new List<Point>();
+                                    break;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Component already has pipe connected");
+                                    flag = 0;
+                                    PointList = new List<Point>();
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("sdaa");
+                                break;
+                            }
+                        }
+                    }
+                }
             }
             else
             { 
@@ -81,14 +162,14 @@ namespace FlowNetwork
 
         private void picMouseMove(object sender, MouseEventArgs e)
         {
-            if (drag)
-            {
-                PictureBox pb = (PictureBox)sender;
-                // Get new position of picture
-                pb.Top += e.Y - y;
-                pb.Left += e.X - x;
-                pb.BringToFront();
-            }
+          if (drag)
+          {
+              PictureBox pb = (PictureBox)sender;
+              // Get new position of picture
+              pb.Top += e.Y - y;
+              pb.Left += e.X - x;
+              pb.BringToFront();
+          }
         }
 
         private void picMouseUp(object sender, MouseEventArgs e)
@@ -120,45 +201,34 @@ namespace FlowNetwork
                 case 1:
                     AddPictureBox(@"../../../images/pump.png");
                     this.lblSelectedComponent.Text = "";
-                    myItems.Add(new Pump(myItems.Count(), x - 30, y - 30));
+                    nw.AddItem(new Pump(nw.GetNewId(), x - 30, y - 30));
                     this.tbcapacity.Enabled = false;
                     this.tbflow.Enabled = false;
                     break;
                 case 2:
                     AddPictureBox(@"../../../images/sink.png");
                     this.lblSelectedComponent.Text = "";
-                    myItems.Add(new Sink(myItems.Count(), x - 30, y - 30));
+                    nw.AddItem(new Sink(nw.GetNewId(), x - 30, y - 30));
                     break;
                 case 3:
                     AddPictureBox(@"../../../images/splitter.png");
                     this.lblSelectedComponent.Text = "";
-                    myItems.Add(new Spliter(myItems.Count(), x - 30, y - 30));
+                    nw.AddItem(new Spliter(nw.GetNewId(), x - 30, y - 30));
                     break;
                 case 4:
                     AddPictureBox(@"../../../images/merger.png");
                     this.lblSelectedComponent.Text = "";
-                    myItems.Add(new Merger(myItems.Count(), x - 30, y - 30));
+                    nw.AddItem(new Merger(nw.GetNewId(), x - 30, y - 30));
                     break;
                 case 5:
-                    bool check = false;
-                    foreach (Item i in myItems)
+                    if (PointList.Count() > 0)
                     {
-                        if (Math.Abs(((Component)i).GivePoint().X - mouseDownPictureBox.X) <= 30 && Math.Abs(((Component)i).GivePoint().Y - mouseDownPictureBox.Y) <= 30)
-                            if(i is Pump || i is Spliter || i is AdjustableSpliter)
-                            {
-                                PointList.Add(new Point(e.X, e.Y));
-                                Graphics g = panel1.CreateGraphics();
-
-                                g.DrawLines(new Pen(Color.Black, 3), PointList.ToArray());
-                                check = true;
-                            }
+                        PointList.Add(new Point(x, y));
                     }
-                    if (!check)
+                    else
                     {
-                        PointList = new List<Point>();
-                        MessageBox.Show("You cannot start a pipe from SINK");
+                        MessageBox.Show("Pipe should start from Component");
                     }
-                    flag = 0;
                     break;
             }
         }
@@ -229,9 +299,14 @@ namespace FlowNetwork
 
         private void btn_add_pipe_Click(object sender, EventArgs e)
         {
+            PointList = new List<Point>();
             flag = 5;
+            this.tbcapacity.Enabled = true;
         }
+        private void DrawPipe()
+        {
 
+        }
 
         
     }

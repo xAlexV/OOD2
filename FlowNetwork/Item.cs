@@ -10,7 +10,7 @@ namespace FlowNetwork
      public class Item
     {
          //fields
-         public int id;
+         private int id;
          
 
          //constructor
