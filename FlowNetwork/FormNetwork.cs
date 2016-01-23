@@ -107,9 +107,9 @@ namespace FlowNetwork
                 }
                 else
                 {
-                    foreach (Component i in nw.GiveList())
+                    foreach (Item i in nw.GiveList())
                     {
-                        if (Math.Abs(i.GivePoint().X - pb.Location.X) <= 20 && Math.Abs(i.GivePoint().Y - pb.Location.Y) <= 20)
+                        if (Math.Abs(((Component)i).GivePoint().X - pb.Location.X) <= 20 && Math.Abs(((Component)i).GivePoint().Y - pb.Location.Y) <= 20)
                         {
                             if (i is Sink || i is Merger || i is Spliter || i is AdjustableSpliter)
                             {
