@@ -266,10 +266,6 @@ namespace FlowNetwork
                 trackform.ShowDialog();
                 int myflow = trackform.MyFlow;
                 label1.Text = myflow.ToString();
-
-                
-
-
             }
         }
         private void buttonMerger_Click(object sender, EventArgs e)
