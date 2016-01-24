@@ -116,10 +116,10 @@ namespace FlowNetwork
                                     //try
                                     //{
                                         ((Component)nw.GetItemFromId(temp.ID())).AddNextComponent(i.ID());
-                                        nw.UpdateFlow(temp, i.ID(), temp.currFlow);
+                                        int curFlow = nw.UpdateFlow(temp, i.ID(), temp.currFlow);
                                         if (i is Sink || i is Merger)
                                         {
-                                            nw.SavePipe(Convert.ToInt32(this.tbcapacity.Text), Convert.ToInt32(temp.GiveCurrFlow()), temp.ID(), i.ID(), PointList);
+                                            nw.SavePipe(Convert.ToInt32(this.tbcapacity.Text), curFlow, temp.ID(), i.ID(), PointList);
                                             tbcapacity.Text = "";
                                             tbcapacity.Enabled = false;
                                            
@@ -128,13 +128,13 @@ namespace FlowNetwork
                                         {
                                             if (i is AdjustableSpliter)
                                             {
-                                                nw.SavePipe(Convert.ToInt32(this.tbcapacity.Text), Convert.ToInt32(temp.GiveCurrFlow()), temp.ID(), i.ID(), PointList);
+                                                nw.SavePipe(Convert.ToInt32(this.tbcapacity.Text), curFlow, temp.ID(), i.ID(), PointList);
                                                 tbcapacity.Text = "";
                                                 tbcapacity.Enabled = false;
                                             }
                                             else
                                             {
-                                                nw.SavePipe(Convert.ToInt32(this.tbcapacity.Text), Convert.ToInt32(temp.GiveCurrFlow()), temp.ID(), i.ID(), PointList);
+                                                nw.SavePipe(Convert.ToInt32(this.tbcapacity.Text), curFlow, temp.ID(), i.ID(), PointList);
                                                 tbcapacity.Text = "";
                                                 tbcapacity.Enabled = false;
                                             }
@@ -384,7 +384,7 @@ namespace FlowNetwork
 
                 g.DrawLines(pen, p.pipePoints.ToArray());
                 Font Myfont = new Font("Times New Roman", 15);
-                g.DrawString(Convert.ToString("Flow is " + secondItem.currFlow), Myfont, Brushes.Black, Convert.ToInt32((firstItem.x + secondItem.x) / 2), Convert.ToInt32((firstItem.y + secondItem.y) / 2));
+                g.DrawString(Convert.ToString("Flow is " + p.GetCurrFlow()), Myfont, Brushes.Black, Convert.ToInt32((firstItem.x + secondItem.x) / 2), Convert.ToInt32((firstItem.y + secondItem.y) / 2));
             }
         }
 
