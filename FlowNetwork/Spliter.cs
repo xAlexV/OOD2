@@ -27,7 +27,7 @@ namespace FlowNetwork
         //methods
         public virtual void calculateFlow(int flow)
        {
-            //do smth
+
        }
     }
 }

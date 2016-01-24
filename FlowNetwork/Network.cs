@@ -125,38 +125,44 @@ namespace FlowNetwork
              }
              return null;
          }
-         public void UpdateFlow(Component type, int id, int flow)
+         public int UpdateFlow(Component type, int id, int flow)
          {
-             if(id != -1)
+             if (id != -1)
                  if (type.GetType().ToString() == "FlowNetwork.Sink" || type.GetType().ToString() == "FlowNetwork.Merger" || type.GetType().ToString() == "FlowNetwork.Pump")
-             {
-                 ((Component)GetItemFromId(id)).ChangeCurrentFlow(flow);
-                 if (((Component)GetItemFromId(id)).nextId!=-1)
-                     UpdateFlow(((Component)GetItemFromId(id)), ((Component)GetItemFromId(id)).nextId, flow);
-             }
-             else
-                 if (type.GetType().ToString() == "FlowNetwork.AdjustableSpliter")
                  {
-                    int split = ((AdjustableSpliter)type).GetSplit();
-                     int xflow =  (flow * ((AdjustableSpliter)type).GetSplit()) / 10;
-                     if (((AdjustableSpliter)type).NextComponents.Count != 0)
-                     if (((AdjustableSpliter)type).NextComponents[0] == id)
+                     ((Component)GetItemFromId(id)).ChangeCurrentFlow(flow);
+                     if (((Component)GetItemFromId(id)).nextId != -1)
+                         UpdateFlow(((Component)GetItemFromId(id)), ((Component)GetItemFromId(id)).nextId, flow);
+                     return flow;
+                 }
+                 else
+                     if (type.GetType().ToString() == "FlowNetwork.AdjustableSpliter")
                      {
-                         ((Component)GetItemFromId(id)).ChangeCurrentFlow(xflow);
-                         UpdateFlow(((Component)GetItemFromId(id)), ((Component)GetItemFromId(id)).nextId, xflow);
+                         int split = ((AdjustableSpliter)type).GetSplit();
+                         int xflow = (flow * ((AdjustableSpliter)type).GetSplit()) / 10;
+                         if (((AdjustableSpliter)type).NextComponents.Count != 0)
+                             if (((AdjustableSpliter)type).NextComponents[0] == id)
+                             {
+                                 ((Component)GetItemFromId(id)).ChangeCurrentFlow(xflow);
+                                 UpdateFlow(((Component)GetItemFromId(id)), ((Component)GetItemFromId(id)).nextId, xflow);
+                                 return xflow;
+                             }
+                             else
+                             {
+                                 ((Component)GetItemFromId(id)).ChangeCurrentFlow(flow - xflow);
+                                 UpdateFlow(((Component)GetItemFromId(id)), ((Component)GetItemFromId(id)).nextId, flow - xflow);
+                                 return flow - xflow;
+                             }
+                         return 100500;
                      }
                      else
                      {
-                         ((Component)GetItemFromId(id)).ChangeCurrentFlow(flow - xflow);
-                         UpdateFlow(((Component)GetItemFromId(id)), ((Component)GetItemFromId(id)).nextId, flow-xflow);
+                         ((Component)GetItemFromId(id)).ChangeCurrentFlow(flow / 2);
+                         UpdateFlow(((Component)GetItemFromId(id)), ((Component)GetItemFromId(id)).nextId, flow / 2);
+                         return flow / 2;
                      }
-                   
-                 }
-                 else
-                 {
-                     ((Component)GetItemFromId(id)).ChangeCurrentFlow(flow/2);
-                     UpdateFlow(((Component)GetItemFromId(id)), ((Component)GetItemFromId(id)).nextId, flow/2);
-                 }
+             else
+                 return 100500;
          }
 
          public List<Pipe> GetListPipes()
