@@ -113,8 +113,8 @@ namespace FlowNetwork
                                 {
                                     mouseDownPictureBox = new Point(pb.Location.X, pb.Location.Y + 20);
                                     PointList.Add(mouseDownPictureBox);
-                                    //try
-                                    //{
+                                    try
+                                    {
                                         ((Component)nw.GetItemFromId(temp.ID())).AddNextComponent(i.ID());
                                         int curFlow = nw.UpdateFlow(temp, i.ID(), temp.currFlow);
                                         if (i is Sink || i is Merger)
@@ -140,13 +140,13 @@ namespace FlowNetwork
                                             }
                                         }      
                                         DrawAllPipes();
-                                    //}
-                                    //catch (Exception)
-                                    //{
-                                    //    MessageBox.Show("You need to feel in Capacity.");
-                                    //    flag = 0;
-                                    //    PointList = new List<Point>();
-                                    //}
+                                    }
+                                    catch (Exception)
+                                    {
+                                        MessageBox.Show("You need to feel in Capacity.");
+                                        flag = 0;
+                                        PointList = new List<Point>();
+                                    }
 
                                     flag = 0;
                                     PointList = new List<Point>();
