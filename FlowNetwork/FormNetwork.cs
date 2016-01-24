@@ -15,7 +15,7 @@ namespace FlowNetwork
         PictureBox tempPb = null;
         int adjastable;
         Component temp;
-        private Network nw = new Network();
+        Network nw;
         List<PictureBox> pictureBoxes = new List<PictureBox>();
         List<Point> PointList = new List<Point>();
         int x = 0;
@@ -29,6 +29,7 @@ namespace FlowNetwork
         public FormNetwork()
         {
             InitializeComponent();
+            nw = new Network();
             this.tbcapacity.Enabled = false;
             this.tbflow.Enabled = false;
             selectedSplitter.Items.Add("Normal Splitter");
@@ -331,16 +332,34 @@ namespace FlowNetwork
 
         private void btreset_Click(object sender, EventArgs e)
         {
-            try
+            if (panel2.Controls.Count > 0)
             {
-                nw.Reset();
-                this.panel2.Controls.Clear();
-                Graphics g = panel2.CreateGraphics();
-                g.Clear(Color.Silver);
-                
+                DialogResult dialog = MessageBox.Show("Do you want to save your network before loading?", "Save?", MessageBoxButtons.YesNo);
+                if (dialog == DialogResult.Yes)
+                {
+                    btsaveas.PerformClick();
+                    nw.Reset();
+                    this.panel2.Controls.Clear();
+                    Graphics g = panel2.CreateGraphics();
+                    g.Clear(Color.Silver);
+                }
+                else if (dialog == DialogResult.No)
+                {
+                    nw.Reset();
+                    this.panel2.Controls.Clear();
+                    Graphics g = panel2.CreateGraphics();
+                    g.Clear(Color.Silver);
+                }
+                btsave.Enabled = false;
             }
-            catch (NullReferenceException) { MessageBox.Show("The drawing board is already empty"); }
-        }
+            else 
+             {
+                 MessageBox.Show("The panel is already empty");
+                }
+            }
+                
+            
+        
 
         private void FormNetwork_Paint(object sender, PaintEventArgs e)
         {
@@ -390,32 +409,51 @@ namespace FlowNetwork
 
         private void btload_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Do you want to save your network before loading?", "Save?", MessageBoxButtons.YesNo);
-
-            if (dialog == DialogResult.Yes)
+            if (panel2.Controls.Count > 0)
             {
-                btsaveas.PerformClick();
+                DialogResult dialog = MessageBox.Show("Do you want to save your network before loading?", "Save?", MessageBoxButtons.YesNo);
+
+                if (dialog == DialogResult.Yes)
+                {
+                    btsaveas.PerformClick();
+                    OpenFileDialog loadDialog = new OpenFileDialog();
+                    if (loadDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        loadDialog.Title = "Load Network from a file";
+                        path = loadDialog.FileName;
+                        nw = Network.Load(loadDialog.FileName);
+                        btsave.Enabled = true;
+
+
+                    }
+                }
+                else if (dialog == DialogResult.No)
+                {
+                    OpenFileDialog loadDialog = new OpenFileDialog();
+                    if (loadDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        loadDialog.Title = "Load Network from a file";
+                        path = loadDialog.FileName;
+                        nw = Network.Load(loadDialog.FileName);
+                        btsave.Enabled = true;
+
+                    }
+                }
+                
+            }
+            else
+            {
                 OpenFileDialog loadDialog = new OpenFileDialog();
                 if (loadDialog.ShowDialog() == DialogResult.OK)
                 {
                     loadDialog.Title = "Load Network from a file";
                     path = loadDialog.FileName;
                     nw = Network.Load(loadDialog.FileName);
-
+                    btsave.Enabled = true;
 
                 }
             }
-            else if (dialog == DialogResult.No)
-            {
-                OpenFileDialog loadDialog = new OpenFileDialog();
-                if (loadDialog.ShowDialog() == DialogResult.OK)
-                {
-                    loadDialog.Title = "Load Network from a file";
-                    path = loadDialog.FileName;
-                    nw = Network.Load(loadDialog.FileName);
-                    
-                }
-            }
+           
         }
 
         private void btsaveas_Click(object sender, EventArgs e)
@@ -427,6 +465,7 @@ namespace FlowNetwork
             {
                 Network.Save(nw, dialog.FileName);
                 path = dialog.FileName;
+                btsave.Enabled = true;
 
             }
         }

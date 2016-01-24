@@ -63,11 +63,10 @@ namespace FlowNetwork
              //do stuff
              using (FileStream fs = new FileStream(path, FileMode.Open))
              {
-                 using (BinaryReader binReader = new BinaryReader(fs))
-                 {
+                
                      BinaryFormatter binForm = new BinaryFormatter();
                      return (Network)binForm.Deserialize(fs);
-                 }
+                 
              }
 
          }
