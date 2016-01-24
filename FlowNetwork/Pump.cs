@@ -10,12 +10,11 @@ namespace FlowNetwork
     public class Pump : Component
     {
         //fields 
-        public int maxFlow;
-        public int currFlow;
+        private int maxFlow;
 
-       public Pump(int id,double x, double y) : base (id, x, y)
+        public Pump(int id,double x, double y, int maxFlow, int currFlow) : base (id, x, y, currFlow)
         {
-
+            this.maxFlow = maxFlow;
         }
     }
 }

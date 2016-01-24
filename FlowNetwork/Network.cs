@@ -115,7 +115,61 @@ namespace FlowNetwork
                  return false;
              return true;
          }
+         public Item GetItemFromId(int id)
+         {
+             foreach (Item i in items)
+             {
+                 if (i.ID() == id)
+                 {
+                     return i;
+                 }
+             }
+             return null;
+         }
+         public void UpdateFlow(Component type, int id, int flow)
+         {
+             if(id != -1)
+                 if (type.GetType().ToString() == "FlowNetwork.Sink" || type.GetType().ToString() == "FlowNetwork.Merger" || type.GetType().ToString() == "FlowNetwork.Pump")
+             {
+                 ((Component)GetItemFromId(id)).ChangeCurrentFlow(flow);
+                 if (((Component)GetItemFromId(id)).nextId!=-1)
+                     UpdateFlow(((Component)GetItemFromId(id)), ((Component)GetItemFromId(id)).nextId, flow);
+             }
+             else
+                 if (type.GetType().ToString() == "FlowNetwork.AdjustableSpliter")
+                 {
+                    int split = ((AdjustableSpliter)type).GetSplit();
+                     int xflow =  (flow * ((AdjustableSpliter)type).GetSplit()) / 10;
+                     if (((AdjustableSpliter)type).NextComponents.Count != 0)
+                     if (((AdjustableSpliter)type).NextComponents[0] == id)
+                     {
+                         ((Component)GetItemFromId(id)).ChangeCurrentFlow(xflow);
+                         UpdateFlow(((Component)GetItemFromId(id)), ((Component)GetItemFromId(id)).nextId, xflow);
+                     }
+                     else
+                     {
+                         ((Component)GetItemFromId(id)).ChangeCurrentFlow(flow - xflow);
+                         UpdateFlow(((Component)GetItemFromId(id)), ((Component)GetItemFromId(id)).nextId, flow-xflow);
+                     }
+                   
+                 }
+                 else
+                 {
+                     ((Component)GetItemFromId(id)).ChangeCurrentFlow(flow/2);
+                     UpdateFlow(((Component)GetItemFromId(id)), ((Component)GetItemFromId(id)).nextId, flow/2);
+                 }
+         }
 
+         public List<Pipe> GetListPipes()
+         {
+             List<Pipe> myList = new List<Pipe>();
+             foreach (Item i in items)
+             {
+                 if (i is Pipe)
+                     myList.Add((Pipe)i);
+             }
+             return myList;
+         }
          public bool FindEndConnection(int id)
          {
              int count = 0;

@@ -15,7 +15,7 @@ namespace FlowNetwork
         private int currFlow;
         private int compId1;
         private int compId2;
-        private List<System.Drawing.Point> pipePoints;
+        public List<System.Drawing.Point> pipePoints;
 
         public Pipe(int id, int maxFlow, int currFlow, int id1, int id2, List<System.Drawing.Point> pipePoints)
             : base(id)
@@ -27,6 +27,14 @@ namespace FlowNetwork
             compId2 = id2;
         }
 
+        public int GetCurrFlow()
+        {
+            return currFlow;
+        }
+        public int GetMaxFlow()
+        {
+            return maxFlow;
+        }
         public int GetFirstId()
         {
             return compId1;

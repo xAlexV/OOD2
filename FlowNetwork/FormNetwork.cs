@@ -12,6 +12,8 @@ namespace FlowNetwork
 {
     public partial class FormNetwork : Form
     {
+        PictureBox tempPb = null;
+        int adjastable;
         Component temp;
         private Network nw = new Network();
         List<PictureBox> pictureBoxes = new List<PictureBox>();
@@ -23,10 +25,6 @@ namespace FlowNetwork
         string path = "";
         Point mouseDown, mouseDownPictureBox;
         ContextMenuStrip selectedSplitter = new ContextMenuStrip();
-        ButtonEnumeration aboutPump = ButtonEnumeration.AboutPump;
-        ButtonEnumeration aboutSink = ButtonEnumeration.AboutSink;
-        ButtonEnumeration aboutSplitter = ButtonEnumeration.AboutSplitter;
-        ButtonEnumeration aboutMerger = ButtonEnumeration.AboutMerger;
 
         public FormNetwork()
         {
@@ -77,8 +75,6 @@ namespace FlowNetwork
                     {
                         if (i is Component)
                         {
-                            int x1 = ((Component)i).GivePoint().X - pb.Location.X;
-                            int x2 = ((Component)i).GivePoint().Y - pb.Location.Y;
                             if (Math.Abs(((Component)i).GivePoint().X - pb.Location.X) <= 20 && Math.Abs(((Component)i).GivePoint().Y - pb.Location.Y) <= 20)
                             {
                                 if (i is Pump || i is Merger || i is Spliter || i is AdjustableSpliter)
@@ -109,30 +105,48 @@ namespace FlowNetwork
                 {
                     foreach (Item i in nw.GiveList())
                     {
-                        if (Math.Abs(((Component)i).GivePoint().X - pb.Location.X) <= 20 && Math.Abs(((Component)i).GivePoint().Y - pb.Location.Y) <= 20)
+                        if ((i is Pipe) == false && Math.Abs(((Component)i).GivePoint().X - pb.Location.X) <= 20 && Math.Abs(((Component)i).GivePoint().Y - pb.Location.Y) <= 20)
                         {
                             if (i is Sink || i is Merger || i is Spliter || i is AdjustableSpliter)
                             {
                                 if (nw.FindEndConnection(i.ID()))
                                 {
                                     mouseDownPictureBox = new Point(pb.Location.X, pb.Location.Y + 20);
-                                    Pen pen = new Pen(Color.Black, 3);
                                     PointList.Add(mouseDownPictureBox);
-                                    try
-                                    {
-                                        nw.SavePipe(Convert.ToInt32(this.tbcapacity.Text), 1, temp.ID(), i.ID(), PointList);
-
-                                        Graphics g = panel2.CreateGraphics();
-
-                                        g.DrawLines(pen, PointList.ToArray());
-                                        Invalidate();
-                                    }
-                                    catch (Exception)
-                                    {
-                                        MessageBox.Show("You need to feel in Capacity.");
-                                        flag = 0;
-                                        PointList = new List<Point>();
-                                    }
+                                    //try
+                                    //{
+                                        ((Component)nw.GetItemFromId(temp.ID())).AddNextComponent(i.ID());
+                                        nw.UpdateFlow(temp, i.ID(), temp.currFlow);
+                                        if (i is Sink || i is Merger)
+                                        {
+                                            nw.SavePipe(Convert.ToInt32(this.tbcapacity.Text), Convert.ToInt32(temp.GiveCurrFlow()), temp.ID(), i.ID(), PointList);
+                                            tbcapacity.Text = "";
+                                            tbcapacity.Enabled = false;
+                                           
+                                        }
+                                        else
+                                        {
+                                            if (i is AdjustableSpliter)
+                                            {
+                                                nw.SavePipe(Convert.ToInt32(this.tbcapacity.Text), Convert.ToInt32(temp.GiveCurrFlow()), temp.ID(), i.ID(), PointList);
+                                                tbcapacity.Text = "";
+                                                tbcapacity.Enabled = false;
+                                            }
+                                            else
+                                            {
+                                                nw.SavePipe(Convert.ToInt32(this.tbcapacity.Text), Convert.ToInt32(temp.GiveCurrFlow()), temp.ID(), i.ID(), PointList);
+                                                tbcapacity.Text = "";
+                                                tbcapacity.Enabled = false;
+                                            }
+                                        }      
+                                        DrawAllPipes();
+                                    //}
+                                    //catch (Exception)
+                                    //{
+                                    //    MessageBox.Show("You need to feel in Capacity.");
+                                    //    flag = 0;
+                                    //    PointList = new List<Point>();
+                                    //}
 
                                     flag = 0;
                                     PointList = new List<Point>();
@@ -145,11 +159,6 @@ namespace FlowNetwork
                                     PointList = new List<Point>();
                                     break;
                                 }
-                            }
-                            else
-                            {
-                                MessageBox.Show("sdaa");
-                                break;
                             }
                         }
                     }
@@ -166,15 +175,34 @@ namespace FlowNetwork
           if (drag)
           {
               PictureBox pb = (PictureBox)sender;
+              Item temp = null;
+              foreach (Item i in nw.GiveList())
+              {
+                  if (i is Component)
+                  {
+                      if (Math.Abs(((Component)i).GivePoint().X - pb.Location.X) <= 20 && Math.Abs(((Component)i).GivePoint().Y - pb.Location.Y) <= 20)
+                      {
+                          temp = i;
+                      }
+                  }
+              }
+              ((Component)temp).GetNewCoordinates(pb.Location.X, pb.Location.Y);
+              DrawAllPipes();
               // Get new position of picture
               pb.Top += e.Y - y;
               pb.Left += e.X - x;
               pb.BringToFront();
+
+              ((Component)temp).GetNewCoordinates(pb.Location.X, pb.Location.Y);
           }
         }
 
         private void picMouseUp(object sender, MouseEventArgs e)
         {
+            if (drag)
+            {
+                
+            }
             drag = false;
         }
        
@@ -200,26 +228,42 @@ namespace FlowNetwork
             switch (flag)
             {
                 case 1:
-                    AddPictureBox(@"../../../images/pump.png");
-                    this.lblSelectedComponent.Text = "";
-                    nw.AddItem(new Pump(nw.GetNewId(), x - 30, y - 30));
-                    this.tbcapacity.Enabled = false;
-                    this.tbflow.Enabled = false;
+                    try
+                    {
+                        if (Convert.ToInt32(tbcapacity.Text) < Convert.ToInt32(tbflow.Text))
+                        {
+                            MessageBox.Show("Capacity should be bigger then current flow");
+                        }
+                        else
+                        {
+                            AddPictureBox(@"../../../images/pump.png");
+                            this.lblSelectedComponent.Text = "";
+                            nw.AddItem(new Pump(nw.GetNewId(), x - 30, y - 30, Convert.ToInt32(this.tbcapacity.Text), Convert.ToInt32(this.tbflow.Text)));
+                            this.tbcapacity.Text = "";
+                            this.tbflow.Text = "";
+                            this.tbcapacity.Enabled = false;
+                            this.tbflow.Enabled = false;
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Your input was wrong");
+                    }
                     break;
                 case 2:
                     AddPictureBox(@"../../../images/sink.png");
                     this.lblSelectedComponent.Text = "";
-                    nw.AddItem(new Sink(nw.GetNewId(), x - 30, y - 30));
+                    nw.AddItem(new Sink(nw.GetNewId(), x - 30, y - 30, 0));
                     break;
                 case 3:
                     AddPictureBox(@"../../../images/splitter.png");
                     this.lblSelectedComponent.Text = "";
-                    nw.AddItem(new Spliter(nw.GetNewId(), x - 30, y - 30));
+                    nw.AddItem(new Spliter(nw.GetNewId(), x - 30, y - 30, 0));
                     break;
                 case 4:
                     AddPictureBox(@"../../../images/merger.png");
                     this.lblSelectedComponent.Text = "";
-                    nw.AddItem(new Merger(nw.GetNewId(), x - 30, y - 30));
+                    nw.AddItem(new Merger(nw.GetNewId(), x - 30, y - 30, 0));
                     break;
                 case 5:
                     if (PointList.Count() > 0)
@@ -230,6 +274,12 @@ namespace FlowNetwork
                     {
                         MessageBox.Show("Pipe should start from Component");
                     }
+                    break;
+                case 6:
+                    AddPictureBox(@"../../../images/splitter.png");
+                    this.lblSelectedComponent.Text = "";
+                    nw.AddItem(new AdjustableSpliter(nw.GetNewId(), x - 30, y - 30, 0, adjastable));
+                    adjastable = 1 / 2;
                     break;
             }
         }
@@ -261,12 +311,12 @@ namespace FlowNetwork
             }
             else if (item.Text == "Adjustable Splitter")
             {
-                flag = 3;
+                flag = 6;
                 this.lblSelectedComponent.Text = "Adjustable Splitter";
                 TrackBar trackform = new TrackBar();
                 trackform.ShowDialog();
                 int myflow = trackform.MyFlow;
-                label1.Text = myflow.ToString();
+                adjastable = myflow;
 
                 
 
@@ -285,6 +335,9 @@ namespace FlowNetwork
             {
                 nw.Reset();
                 this.panel2.Controls.Clear();
+                Graphics g = panel2.CreateGraphics();
+                g.Clear(Color.Silver);
+                
             }
             catch (NullReferenceException) { MessageBox.Show("The drawing board is already empty"); }
         }
@@ -305,9 +358,34 @@ namespace FlowNetwork
             flag = 5;
             this.tbcapacity.Enabled = true;
         }
-        private void DrawPipe()
+        private void DrawAllPipes()
         {
+            Graphics g = panel2.CreateGraphics();
+            g.Clear(Color.Silver);
 
+            List<Pipe> pipeList = nw.GetListPipes();
+            foreach (Pipe p in pipeList)
+            {
+                Component firstItem = (Component)nw.GetItemFromId(p.GetFirstId());
+                Component secondItem = (Component)nw.GetItemFromId(p.GetSecondId());
+
+                p.pipePoints[0] = new Point(Convert.ToInt32(firstItem.x)+40, Convert.ToInt32(firstItem.y)+20);
+                p.pipePoints[p.pipePoints.Count()-1] = new Point(Convert.ToInt32(secondItem.x)+40, Convert.ToInt32(secondItem.y)+20);
+
+                Pen pen;
+                if (firstItem.GiveCurrFlow() > p.GetMaxFlow())
+                {
+                    pen = new Pen(Color.Red, 3);
+                }
+                else
+                {
+                    pen = new Pen(Color.Black, 3);
+                }
+
+                g.DrawLines(pen, p.pipePoints.ToArray());
+                Font Myfont = new Font("Times New Roman", 15);
+                g.DrawString(Convert.ToString("Flow is " + secondItem.currFlow), Myfont, Brushes.Black, Convert.ToInt32((firstItem.x + secondItem.x) / 2), Convert.ToInt32((firstItem.y + secondItem.y) / 2));
+            }
         }
 
         private void btload_Click(object sender, EventArgs e)
@@ -351,6 +429,11 @@ namespace FlowNetwork
                 path = dialog.FileName;
 
             }
+        }
+
+        private void btremove_Click(object sender, EventArgs e)
+        {
+
         }
 
         

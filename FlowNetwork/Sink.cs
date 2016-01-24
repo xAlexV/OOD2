@@ -13,7 +13,7 @@ namespace FlowNetwork
         public int currFlow;
 
 
-       public Sink(int id,double x, double y) : base (id, x, y)
+       public Sink(int id,double x, double y, int currFlaw) : base (id, x, y, currFlaw)
 
         {
 
