@@ -83,10 +83,10 @@ namespace FlowNetwork
                         {
                             foreach (Pipe p in nw.GetListPipes())
                             {
-                                Point x = c.GetPoint();
-                                x.X += 40;
-                                x.Y += 20;
-                                if (x == p.pipePoints[0] || x == p.pipePoints[1])
+                                Point point = c.GetPoint();
+                                point.X += 40;
+                                point.Y += 20;
+                                if (point == p.pipePoints[0] || point == p.pipePoints[1])
                                 {
                                     id2 = p.ID();
                                 }
@@ -394,7 +394,7 @@ namespace FlowNetwork
         private void selectedSplitter_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             ToolStripItem item = e.ClickedItem;
-
+            selectedSplitter.ItemClicked -= new ToolStripItemClickedEventHandler(selectedSplitter_ItemClicked);
             if (item.Text == "Normal Splitter")
             {
                 flag = 3;
@@ -408,8 +408,7 @@ namespace FlowNetwork
                 trackform.ShowDialog();
                 int myflow = trackform.MyFlow;
                 adjastable = myflow;
-
-
+                
 
 
             }
