@@ -7,6 +7,7 @@ using System.IO;
 using System.Drawing;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Windows.Forms;
 
 namespace FlowNetwork
 {
@@ -14,9 +15,18 @@ namespace FlowNetwork
      public class Network : ISerializable
     {
         private List<Item> items;
+        private List<PictureBox> pictureBoxes;
 
 
 
+        public void AddPictureBox(PictureBox pb)
+        {
+            pictureBoxes.Add(pb);
+        }
+        public List<PictureBox> GetPictureBoxesList()
+        {
+            return pictureBoxes;
+        }
         public void SavePipe(int maxFlow, int currentFlow, int id1, int id2, List<Point> pointList)
         {
             Pipe p = new Pipe(items.Count(), maxFlow, currentFlow, id1, id2, pointList);
@@ -25,6 +35,7 @@ namespace FlowNetwork
         public Network()
         {
             items = new List<Item>();
+            pictureBoxes = new List<PictureBox>();
         }
 
         public Network(SerializationInfo information, StreamingContext scontext)
@@ -48,10 +59,11 @@ namespace FlowNetwork
         }
 
          public static void Save(Network network, String path)
-         { 
+         {
              //include save as as a condition
              using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
              {
+                 
                  BinaryFormatter binForm = new BinaryFormatter();
                  binForm.Serialize(fs, network); 
              }

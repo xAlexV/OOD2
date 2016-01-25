@@ -37,6 +37,49 @@ namespace FlowNetwork
             selectedSplitter.Items.Add("Adjustable Splitter");
         }
 
+        public void DrawAllPictureBoxes()
+        {
+            foreach (Item i in nw.GetItemList())
+            {
+                if (i is Component)
+                {
+                    var pb = new PictureBox();
+                    pb.Name = "picturebox" + pictureBoxes.Count;
+                    pb.Location = ((Component)i).GetPoint();
+                    pb.Size = new Size(60, 60);
+                    pb.BorderStyle = BorderStyle.None;
+                    pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                    panel2.Controls.Add(pb);
+
+                    if (i is Spliter)
+                    {
+                        pb.Image = Image.FromFile("../../../images/spliter.png");
+                    }
+                    else
+                        if (i is Sink)
+                        {
+                            pb.Image = Image.FromFile("../../../images/sink.png");
+                        }
+                        else
+                            if (i is Pump)
+                            {
+                                pb.Image = Image.FromFile("../../../images/pump.png");
+                            }
+                            else
+                                if (i is Merger)
+                                {
+                                    pb.Image = Image.FromFile("../../../images/merger.png");
+                                }
+
+                    pb.Refresh();
+                    pb.MouseDown += new MouseEventHandler(picMouseDown);
+                    pb.MouseMove += new MouseEventHandler(picMouseMove);
+                    pb.MouseUp += new MouseEventHandler(picMouseUp);
+                    pictureBoxes.Add(pb);
+                    Invalidate();
+                }
+            }
+        }
         private void AddPictureBox(string imagePath)
         {
             if (flag != 0)
@@ -512,6 +555,7 @@ namespace FlowNetwork
                         path = loadDialog.FileName;
                         nw = Network.Load(loadDialog.FileName);
                         btsave.Enabled = true;
+                        
 
 
                     }
@@ -539,10 +583,12 @@ namespace FlowNetwork
                     path = loadDialog.FileName;
                     nw = Network.Load(loadDialog.FileName);
                     btsave.Enabled = true;
+                    
 
                 }
             }
-
+            DrawAllPipes();
+            DrawAllPictureBoxes();
         }
 
         private void btsaveas_Click(object sender, EventArgs e)
