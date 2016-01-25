@@ -10,7 +10,7 @@ namespace FlowNetwork
    public class Sink : Component
     {
         //fields 
-        public int currFlow;
+        //public int currFlow;
 
 
        public Sink(int id,double x, double y, int currFlaw) : base (id, x, y, currFlaw)

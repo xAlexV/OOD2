@@ -58,7 +58,7 @@ namespace FlowNetwork
          }
 
 
-         public static Network Load(String path)
+         public static Network Load(string path)
          {
              //do stuff
              using (FileStream fs = new FileStream(path, FileMode.Open))
@@ -175,6 +175,7 @@ namespace FlowNetwork
              }
              return myList;
          }
+
          public bool FindEndConnection(int id)
          {
              int count = 0;
@@ -198,7 +199,7 @@ namespace FlowNetwork
                  return false;
              return true;
          }
-         public List<Item> GiveList()
+         public List<Item> GetItemList()
          {
              return items;
          }

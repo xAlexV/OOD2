@@ -16,7 +16,7 @@ namespace FlowNetwork
 
        public override void ChangeCurrentFlow(int newFlow)
        {
-           base.currFlow += newFlow;
+            currFlow += newFlow;
        }
     }
     }

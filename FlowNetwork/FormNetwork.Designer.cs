@@ -86,7 +86,7 @@
             // 
             this.btn_add_pipe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_add_pipe.BackgroundImage")));
             this.btn_add_pipe.Location = new System.Drawing.Point(25, 412);
-            this.btn_add_pipe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_add_pipe.Margin = new System.Windows.Forms.Padding(2);
             this.btn_add_pipe.Name = "btn_add_pipe";
             this.btn_add_pipe.Size = new System.Drawing.Size(74, 51);
             this.btn_add_pipe.TabIndex = 21;
@@ -239,6 +239,7 @@
             this.tbflow.Name = "tbflow";
             this.tbflow.Size = new System.Drawing.Size(52, 20);
             this.tbflow.TabIndex = 2;
+            this.tbflow.Text = "123";
             // 
             // tbcapacity
             // 
@@ -246,6 +247,7 @@
             this.tbcapacity.Name = "tbcapacity";
             this.tbcapacity.Size = new System.Drawing.Size(52, 20);
             this.tbcapacity.TabIndex = 1;
+            this.tbcapacity.Text = "321";
             // 
             // panel2
             // 
@@ -254,8 +256,8 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(645, 524);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // btremove
             // 
@@ -292,6 +294,7 @@
             this.btsave.TabIndex = 4;
             this.btsave.Text = "SAVE";
             this.btsave.UseVisualStyleBackColor = false;
+            this.btsave.Click += new System.EventHandler(this.btsave_Click);
             // 
             // btload
             // 

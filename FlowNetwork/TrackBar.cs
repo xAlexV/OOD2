@@ -26,13 +26,13 @@ namespace FlowNetwork
 
         private void btconfirm_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
            
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            label1.Text = trackBar1.Value.ToString();
+            label1.Text = (trackBar1.Value*10).ToString();
             trackflow = trackBar1.Value;
         }
 

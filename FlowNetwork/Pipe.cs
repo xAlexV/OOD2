@@ -15,9 +15,9 @@ namespace FlowNetwork
         private int currFlow;
         private int compId1;
         private int compId2;
-        public List<System.Drawing.Point> pipePoints;
+        public List<Point> pipePoints;
 
-        public Pipe(int id, int maxFlow, int currFlow, int id1, int id2, List<System.Drawing.Point> pipePoints)
+        public Pipe(int id, int maxFlow, int currFlow, int id1, int id2, List<Point> pipePoints)
             : base(id)
         {
             this.maxFlow = maxFlow;

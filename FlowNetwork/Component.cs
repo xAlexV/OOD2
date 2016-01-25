@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,9 +27,9 @@ namespace FlowNetwork
         {
             nextId = id;
         }
-        public System.Drawing.Point GivePoint()
+        public Point GetPoint()
         {
-            return new System.Drawing.Point(Convert.ToInt32(x), Convert.ToInt32(y));
+            return new Point(Convert.ToInt32(x), Convert.ToInt32(y));
         }
 
         public int GiveCurrFlow()
@@ -43,7 +44,7 @@ namespace FlowNetwork
 
         public virtual void ChangeCurrentFlow(int newFlow)
         {
-            this.currFlow = newFlow;
+            currFlow = newFlow;
         }
     }
 }

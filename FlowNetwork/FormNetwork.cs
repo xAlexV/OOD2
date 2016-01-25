@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,6 @@ namespace FlowNetwork
 {
     public partial class FormNetwork : Form
     {
-        PictureBox tempPb = null;
         int adjastable;
         Component temp;
         Network nw;
@@ -26,19 +26,20 @@ namespace FlowNetwork
         Point mouseDown, mouseDownPictureBox;
         ContextMenuStrip selectedSplitter = new ContextMenuStrip();
 
+
         public FormNetwork()
         {
             InitializeComponent();
             nw = new Network();
-            this.tbcapacity.Enabled = false;
-            this.tbflow.Enabled = false;
+            tbcapacity.Enabled = false;
+            tbflow.Enabled = false;
             selectedSplitter.Items.Add("Normal Splitter");
-            selectedSplitter.Items.Add("Adjustable Splitter");     
+            selectedSplitter.Items.Add("Adjustable Splitter");
         }
 
         private void AddPictureBox(string imagePath)
         {
-            if (flag!= 0)
+            if (flag != 0)
             {
                 var pb = new PictureBox();
                 pb.Name = "picturebox" + pictureBoxes.Count;
@@ -60,23 +61,61 @@ namespace FlowNetwork
                 flag = 0;
                 Invalidate();
             }
-        
+
         }
-      private void picMouseDown(object sender, MouseEventArgs e)
+        private void picMouseDown(object sender, MouseEventArgs e)
         {
             // Get original position of cursor on mousedown
             x = e.X;
             y = e.Y;
             PictureBox pb = (PictureBox)sender;
-            if(flag == 5)
+            if (flag == 7)
+            {
+                pb.Visible = false;
+                int id1 = -1;
+                int id2 = -1;
+                foreach (Item i in nw.GetItemList())
+                {
+                    if (i is Component)
+                    {
+                        Component c = (Component)i;
+                        if (c.GetPoint().X + 10 == pb.Location.X && c.GetPoint().Y + 10 == pb.Location.Y)
+                        {
+                            foreach (Pipe p in nw.GetListPipes())
+                            {
+                                Point x = c.GetPoint();
+                                x.X += 40;
+                                x.Y += 20;
+                                if (x == p.pipePoints[0] || x == p.pipePoints[1])
+                                {
+                                    id2 = p.ID();
+                                }
+                            }
+                        }
+                        id1 = c.ID();
+                    }
+                }
+                if (nw.Remove(id2))
+                {
+                    DrawAllPipes();
+                }
+                if (nw.Remove(id1))
+                {
+                    pictureBoxes.Remove(pb);
+                    pb.Dispose();
+                }
+                flag = 0;
+            }
+
+            if (flag == 5)
             {
                 if (PointList.Count() == 0)
                 {
-                    foreach (Item i in nw.GiveList())
+                    foreach (Item i in nw.GetItemList())
                     {
                         if (i is Component)
                         {
-                            if (Math.Abs(((Component)i).GivePoint().X - pb.Location.X) <= 20 && Math.Abs(((Component)i).GivePoint().Y - pb.Location.Y) <= 20)
+                            if (Math.Abs(((Component)i).GetPoint().X - pb.Location.X) <= 20 && Math.Abs(((Component)i).GetPoint().Y - pb.Location.Y) <= 20)
                             {
                                 if (i is Pump || i is Merger || i is Spliter || i is AdjustableSpliter)
                                 {
@@ -104,9 +143,9 @@ namespace FlowNetwork
                 }
                 else
                 {
-                    foreach (Item i in nw.GiveList())
+                    foreach (Item i in nw.GetItemList())
                     {
-                        if ((i is Pipe) == false && Math.Abs(((Component)i).GivePoint().X - pb.Location.X) <= 20 && Math.Abs(((Component)i).GivePoint().Y - pb.Location.Y) <= 20)
+                        if ((i is Pipe) == false && Math.Abs(((Component)i).GetPoint().X - pb.Location.X) <= 20 && Math.Abs(((Component)i).GetPoint().Y - pb.Location.Y) <= 20)
                         {
                             if (i is Sink || i is Merger || i is Spliter || i is AdjustableSpliter)
                             {
@@ -120,26 +159,26 @@ namespace FlowNetwork
                                         int curFlow = nw.UpdateFlow(temp, i.ID(), temp.currFlow);
                                         if (i is Sink || i is Merger)
                                         {
-                                            nw.SavePipe(Convert.ToInt32(this.tbcapacity.Text), curFlow, temp.ID(), i.ID(), PointList);
+                                            nw.SavePipe(Convert.ToInt32(tbcapacity.Text), curFlow, temp.ID(), i.ID(), PointList);
                                             tbcapacity.Text = "";
                                             tbcapacity.Enabled = false;
-                                           
+
                                         }
                                         else
                                         {
                                             if (i is AdjustableSpliter)
                                             {
-                                                nw.SavePipe(Convert.ToInt32(this.tbcapacity.Text), curFlow, temp.ID(), i.ID(), PointList);
+                                                nw.SavePipe(Convert.ToInt32(tbcapacity.Text), curFlow, temp.ID(), i.ID(), PointList);
                                                 tbcapacity.Text = "";
                                                 tbcapacity.Enabled = false;
                                             }
                                             else
                                             {
-                                                nw.SavePipe(Convert.ToInt32(this.tbcapacity.Text), curFlow, temp.ID(), i.ID(), PointList);
+                                                nw.SavePipe(Convert.ToInt32(tbcapacity.Text), curFlow, temp.ID(), i.ID(), PointList);
                                                 tbcapacity.Text = "";
                                                 tbcapacity.Enabled = false;
                                             }
-                                        }      
+                                        }
                                         DrawAllPipes();
                                     }
                                     catch (Exception)
@@ -165,64 +204,63 @@ namespace FlowNetwork
                     }
                 }
             }
-            else
-            { 
+            else {
                 drag = true;
             }
+
         }
 
         private void picMouseMove(object sender, MouseEventArgs e)
         {
-          if (drag)
-          {
-              PictureBox pb = (PictureBox)sender;
-              Item temp = null;
-              foreach (Item i in nw.GiveList())
-              {
-                  if (i is Component)
-                  {
-                      if (Math.Abs(((Component)i).GivePoint().X - pb.Location.X) <= 20 && Math.Abs(((Component)i).GivePoint().Y - pb.Location.Y) <= 20)
-                      {
-                          temp = i;
-                      }
-                  }
-              }
-              ((Component)temp).GetNewCoordinates(pb.Location.X, pb.Location.Y);
-              DrawAllPipes();
-              // Get new position of picture
-              pb.Top += e.Y - y;
-              pb.Left += e.X - x;
-              pb.BringToFront();
+            if (drag)
+            {
+                PictureBox pb = (PictureBox)sender;
+                Item temp = null;
+                foreach (Item i in nw.GetItemList())
+                {
+                    if (i is Component)
+                    {
+                        if (Math.Abs(((Component)i).GetPoint().X - pb.Location.X) <= 20 && Math.Abs(((Component)i).GetPoint().Y - pb.Location.Y) <= 20)
+                        {
+                            temp = i;
+                        }
+                    }
+                }
+                ((Component)temp).GetNewCoordinates(pb.Location.X, pb.Location.Y);
+                DrawAllPipes();
+                // Get new position of picture
+                pb.Top += e.Y - y;
+                pb.Left += e.X - x;
+                pb.BringToFront();
 
-              ((Component)temp).GetNewCoordinates(pb.Location.X, pb.Location.Y);
-          }
+                ((Component)temp).GetNewCoordinates(pb.Location.X, pb.Location.Y);
+            }
+
         }
 
         private void picMouseUp(object sender, MouseEventArgs e)
         {
-            if (drag)
-            {
-                
-            }
             drag = false;
         }
-       
-        private void panel2_Paint(object sender, PaintEventArgs e)
+
+        private void panel2MouseUp(object sender, MouseEventArgs e)
         {
+            drag = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //AddPictureBox(@"../../../images/pump.png");
             flag = 1;
-            this.tbcapacity.Enabled = true;
-            this.tbflow.Enabled = true;
-            this.lblSelectedComponent.Text = "Pump";
-      
+            tbcapacity.Enabled = true;
+            tbflow.Enabled = true;
+            lblSelectedComponent.Text = "Pump";
+
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
+            drag = false;
             x = e.X;
             y = e.Y;
             mouseDown = new Point(x - 20, y - 20);
@@ -238,12 +276,12 @@ namespace FlowNetwork
                         else
                         {
                             AddPictureBox(@"../../../images/pump.png");
-                            this.lblSelectedComponent.Text = "";
-                            nw.AddItem(new Pump(nw.GetNewId(), x - 30, y - 30, Convert.ToInt32(this.tbcapacity.Text), Convert.ToInt32(this.tbflow.Text)));
-                            this.tbcapacity.Text = "";
-                            this.tbflow.Text = "";
-                            this.tbcapacity.Enabled = false;
-                            this.tbflow.Enabled = false;
+                            lblSelectedComponent.Text = "";
+                            nw.AddItem(new Pump(nw.GetNewId(), x - 30, y - 30, Convert.ToInt32(tbcapacity.Text), Convert.ToInt32(tbflow.Text)));
+                            tbcapacity.Text = "";
+                            tbflow.Text = "";
+                            tbcapacity.Enabled = false;
+                            tbflow.Enabled = false;
                         }
                     }
                     catch
@@ -253,17 +291,17 @@ namespace FlowNetwork
                     break;
                 case 2:
                     AddPictureBox(@"../../../images/sink.png");
-                    this.lblSelectedComponent.Text = "";
+                    lblSelectedComponent.Text = "";
                     nw.AddItem(new Sink(nw.GetNewId(), x - 30, y - 30, 0));
                     break;
                 case 3:
                     AddPictureBox(@"../../../images/splitter.png");
-                    this.lblSelectedComponent.Text = "";
+                    lblSelectedComponent.Text = "";
                     nw.AddItem(new Spliter(nw.GetNewId(), x - 30, y - 30, 0));
                     break;
                 case 4:
                     AddPictureBox(@"../../../images/merger.png");
-                    this.lblSelectedComponent.Text = "";
+                    lblSelectedComponent.Text = "";
                     nw.AddItem(new Merger(nw.GetNewId(), x - 30, y - 30, 0));
                     break;
                 case 5:
@@ -278,23 +316,75 @@ namespace FlowNetwork
                     break;
                 case 6:
                     AddPictureBox(@"../../../images/splitter.png");
-                    this.lblSelectedComponent.Text = "";
+                    lblSelectedComponent.Text = "";
                     nw.AddItem(new AdjustableSpliter(nw.GetNewId(), x - 30, y - 30, 0, adjastable));
                     adjastable = 1 / 2;
                     break;
+                case 7:
+                    Point clicked = new Point(x, y);
+                    {
+                        //PictureBox rpb1 = null, rpb2 = null;
+                        //Point temp2;
+                        foreach (Pipe p in nw.GetListPipes())
+                        {
+                            if (RemoveLine(p.pipePoints[0], p.pipePoints[1], clicked, 3))
+                            {
+                                nw.Remove(p.ID());
+                                // nw.Remove(p.GetFirstId());
+                                // nw.Remove(p.GetSecondId());
+                                /* foreach (PictureBox x in pictureBoxes)
+                                 {
+                                     temp2 = x.Location;
+                                     temp2.X += 30;
+                                     temp2.Y += 10;
+                                     if (p.pipePoints[0] == temp2)
+                                     {
+                                         x.Visible = false;
+                                         rpb1 = x;
+                                     }
+                                     if (p.pipePoints[1] == temp2)
+                                     {
+                                         x.Visible = false;
+                                         rpb2 = x;
+                                     }
+                                 }
+                                 pictureBoxes.Remove(rpb1);
+                                 pictureBoxes.Remove(rpb2);
+                             }*/
+                            }
+                        }
+                    }
+                    DrawAllPipes();
+                    flag = 0;
+                    break;
             }
+        }
+
+
+        private bool RemoveLine(Point p1, Point p2, Point p, int width)
+        {
+            bool isOnLine = false;
+            using (GraphicsPath path = new GraphicsPath())
+            {
+                using (Pen pen = new Pen(Brushes.Black, width))
+                {
+                    path.AddLine(p1, p2);
+                    isOnLine = path.IsOutlineVisible(p, pen);
+                }
+            }
+            return isOnLine;
         }
 
         private void buttonSink_Click(object sender, EventArgs e)
         {
             flag = 2;
-            this.lblSelectedComponent.Text = "Sink";
-            
+            lblSelectedComponent.Text = "Sink";
+
         }
 
         private void buttonSplitter_Click(object sender, EventArgs e)
         {
-          //  flag = 3;
+            //  flag = 3;
             //this.lblSelectedComponent.Text = "Splitter";
 
             selectedSplitter.Show(buttonSplitter, new Point(0, buttonSplitter.Height));
@@ -308,18 +398,18 @@ namespace FlowNetwork
             if (item.Text == "Normal Splitter")
             {
                 flag = 3;
-                this.lblSelectedComponent.Text = e.ClickedItem.Text;
+                lblSelectedComponent.Text = e.ClickedItem.Text;
             }
             else if (item.Text == "Adjustable Splitter")
             {
                 flag = 6;
-                this.lblSelectedComponent.Text = "Adjustable Splitter";
+                lblSelectedComponent.Text = "Adjustable Splitter";
                 TrackBar trackform = new TrackBar();
                 trackform.ShowDialog();
                 int myflow = trackform.MyFlow;
                 adjastable = myflow;
 
-                
+
 
 
             }
@@ -327,7 +417,7 @@ namespace FlowNetwork
         private void buttonMerger_Click(object sender, EventArgs e)
         {
             flag = 4;
-            this.lblSelectedComponent.Text = "Merger";
+            lblSelectedComponent.Text = "Merger";
         }
 
         private void btreset_Click(object sender, EventArgs e)
@@ -339,31 +429,31 @@ namespace FlowNetwork
                 {
                     btsaveas.PerformClick();
                     nw.Reset();
-                    this.panel2.Controls.Clear();
+                    panel2.Controls.Clear();
                     Graphics g = panel2.CreateGraphics();
                     g.Clear(Color.Silver);
                 }
                 else if (dialog == DialogResult.No)
                 {
                     nw.Reset();
-                    this.panel2.Controls.Clear();
+                    panel2.Controls.Clear();
                     Graphics g = panel2.CreateGraphics();
                     g.Clear(Color.Silver);
                 }
                 btsave.Enabled = false;
             }
-            else 
-             {
-                 MessageBox.Show("The panel is already empty");
-                }
+            else
+            {
+                MessageBox.Show("The panel is already empty");
             }
-                
-            
-        
+        }
+
+
+
 
         private void FormNetwork_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -375,7 +465,7 @@ namespace FlowNetwork
         {
             PointList = new List<Point>();
             flag = 5;
-            this.tbcapacity.Enabled = true;
+            tbcapacity.Enabled = true;
         }
         private void DrawAllPipes()
         {
@@ -388,8 +478,8 @@ namespace FlowNetwork
                 Component firstItem = (Component)nw.GetItemFromId(p.GetFirstId());
                 Component secondItem = (Component)nw.GetItemFromId(p.GetSecondId());
 
-                p.pipePoints[0] = new Point(Convert.ToInt32(firstItem.x)+40, Convert.ToInt32(firstItem.y)+20);
-                p.pipePoints[p.pipePoints.Count()-1] = new Point(Convert.ToInt32(secondItem.x)+40, Convert.ToInt32(secondItem.y)+20);
+                p.pipePoints[0] = new Point(Convert.ToInt32(firstItem.x) + 40, Convert.ToInt32(firstItem.y) + 20);
+                p.pipePoints[p.pipePoints.Count() - 1] = new Point(Convert.ToInt32(secondItem.x) + 40, Convert.ToInt32(secondItem.y) + 20);
 
                 Pen pen;
                 if (firstItem.GiveCurrFlow() > p.GetMaxFlow())
@@ -439,7 +529,7 @@ namespace FlowNetwork
 
                     }
                 }
-                
+
             }
             else
             {
@@ -453,7 +543,7 @@ namespace FlowNetwork
 
                 }
             }
-           
+
         }
 
         private void btsaveas_Click(object sender, EventArgs e)
@@ -470,12 +560,17 @@ namespace FlowNetwork
             }
         }
 
-        private void btremove_Click(object sender, EventArgs e)
+        private void btsave_Click(object sender, EventArgs e)
         {
-
+            Network.Save(nw, path);
         }
 
-        
+        private void btremove_Click(object sender, EventArgs e)
+        {
+            flag = 7;
+        }
+
+
     }
 
 }
